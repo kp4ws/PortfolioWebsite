@@ -1,83 +1,64 @@
-baseurl = "https://example.kentpawson.com" # Hostname (and path) to the root.
-title = "Kent Pawson" # Site title.
-theme = "hugo-coder-portfolio" # Set the theme.
-languagecode = "en" # The site’s language code used to generate RSS.
-defaultcontentlanguage = "en" # The default content language.
-
-paginate = 20 # Default number of pages per page in pagination.
-
-pygmentsstyle = "b2" # Color-theme or style for syntax highlighting.
-pygmentscodefences = true # Enable code fence background highlighting.
-pygmentscodefencesguesssyntax = true # Enable syntax guessing for code fences without specified language.
-pygmentsUseClasses = true # new add
-
-disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
-
-[params] # theme parameters
-    author = "Kent Pawson" # Author's name.
-    info = "Software Developer" # Author's job title or info.
-    description = "Kent Pawson's portfolio website" # Site description.
-    keywords = "blog,developer,personal" # Site keywords.
-    avatarurl = "images/profile-image.jpg" # Contain the path of the optionnal avatar in the static folder.
-
-    footercontent = "" # Add footer content
-    fixedbarContent = "" # Add f)ixedbar content
-    fixedbarContentAfter = "" # Add fixedbar content after click
-
-    # Whether you want to hide copyright and credits in the footer.
-    hideCredits = false
-    hideCopyright = false
-
-    # Custom CSS
-    custom_css = []
-
-    # Alignment of Mobile Menu items
-    itemscentered = true
-
-    # RTL support
-    rtl = false
-
-    # Bottom sns share
-    snsShare = true # new add
-    # Popular sns share
-    # if you want add sns. please message!
-    enableTwitterShare = false  # new add
-    enableFacebookShare = false # new add
-    enableHatenaShare = false   # new add
-    enableLineShare = false     # new add
-    enableLinkedInShare = false # new add
-
-    thumbnail = "images/tn.png" # default sns thumbnail
-
-    # Multilanguage mode
-    langseparator = "|" # Separates menus from language selectors when site is multilingual.
-
-# Social links
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github"
-    weight = 1
-    url = "https://github.com/naro143/"
-[[params.social]]
-    name = "LinkedIn"
-    icon = "fab fa-linkedin"
-    weight = 3
-    url = "https://www.linkedin.com/in/kentpawson/"
-
-# Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "posts"
-    [[menu.main]]
-    name = "Projects"
-    weight = 2
-    url = "projects"
-[[menu.main]]
-    name = "About"
-    weight = 2
-    url = "about"
-[[menu.main]]
-    name = "Contact Me"
-    weight = 2
-    url = "contact"
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.asciidocExt]
+    backend = "html5"
+    extensions = []
+    failureLevel = "fatal"
+    noHeaderOrFooter = true
+    preserveTOC = false
+    safeMode = "unsafe"
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+      [markup.goldmark.parser.attribute]
+        block = false
+        title = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
