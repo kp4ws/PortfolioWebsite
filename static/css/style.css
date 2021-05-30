@@ -1,0 +1,83 @@
+/**********
+VARIABLES
+***********/
+:root{
+ --foreground-color: #F1FAEE;
+ --background-color: #CDE2FF;
+ --navbar-color: #1D3557;
+ --secondary-color: #457B9D;
+}
+
+
+/******************
+ELEMENT SELECTORS
+*******************/
+body{
+    background-color: #CDE2FF !important;
+    font-family: monospace;
+}
+
+a{
+    color: #F1FAEE;
+    padding: 10px;
+}
+
+/***************
+ID SELECTORS
+****************/
+#site-title{
+    font-size: 50px;
+    color: #457B9D;
+}
+
+#profile-image{
+    width: 25%;
+    height: auto;
+}
+
+#footer-section{
+    margin: 50px 50px 20px;
+    text-align: center;
+}
+
+/******************
+CLASS SELECTORS
+*******************/
+.pre-nav{
+    background-color: #F1FAEE;
+    text-align: center;
+}
+
+.nav-bar{
+    background-color: #1D3557;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+h1.container-title{
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+h1.container-title:after{
+    content: "";
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.box-container{
+    background-color: #F1FAEE; 
+}
+
+
+.rect-container{
+    z-index: 100;
+    opacity: 0.8;
+    background-color: white;
+    position: absolute;
+}
+
+
