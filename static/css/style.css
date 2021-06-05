@@ -2,82 +2,102 @@
 VARIABLES
 ***********/
 :root{
- --foreground-color: #F1FAEE;
- --background-color: #CDE2FF;
- --navbar-color: #1D3557;
- --secondary-color: #457B9D;
+
+    --primary-color: #0D0D0D;
+    --secondary-color: #F2F2F2;
+   
+    --foreground-color: #FFF;
+    --highlight-color: #FFAF7A;
+   
+    --header-size: 45px;
+    --subheader-size: 25px;
+   
+   }
+
+/******
+RESETS
+*******/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+*,
+*::before
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--secondary-color);
+    font-family: 'Montserrat', monospace;
+    font-size: 1.8rem;
+}
 
 /******************
 ELEMENT SELECTORS
 *******************/
-body{
-    background-color: #CDE2FF !important;
-    font-family: monospace;
-}
-
-a{
-    color: #F1FAEE;
-    padding: 10px;
-}
 
 /***************
 ID SELECTORS
 ****************/
-#site-title{
-    font-size: 50px;
-    color: #457B9D;
-}
-
-#profile-image{
-    width: 25%;
-    height: auto;
-}
-
-#footer-section{
-    margin: 50px 50px 20px;
-    text-align: center;
+#welcome-message
+{
+    font-size: 32px;
+    font-weight: bold;
 }
 
 /******************
 CLASS SELECTORS
 *******************/
-.pre-nav{
-    background-color: #F1FAEE;
-    text-align: center;
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    align-items: center;
+    width: 100%;
+    padding: 30px 30px;    
+    background-color: var(--primary-color);
+    z-index: 9999;
 }
 
-.nav-bar{
-    background-color: #1D3557;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 20px;
+.nav-links{
+    list-style: none;
 }
 
-h1.container-title{
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-h1.container-title:after{
-    content: "";
-    position: relative;
+.nav-links li{
     display: inline-block;
-    border-bottom: 1px solid black;
+    font-weight: bold;
+    padding: 0px 15px;
 }
 
-.box-container{
-    background-color: #F1FAEE; 
+.nav a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.2s ease 0s;
 }
 
-
-.rect-container{
-    z-index: 100;
-    opacity: 0.8;
-    background-color: white;
-    position: absolute;
+.nav a:hover{
+    color: var(--highlight-color);
 }
 
+.logo{
+    font-size: 2rem;
+}
+
+.about-section{
+
+}
+
+.particle-background
+{
+    /*TODO add particles with js*/
+}
 
