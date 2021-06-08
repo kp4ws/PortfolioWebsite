@@ -1,82 +1,109 @@
-const canvas = document.getElementById("canvas1");
+const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = document.body.scrollHeight; //TODO! Make responsive size
 
-const PARTICLE_AMOUNT = 100;
+const PARTICLE_AMOUNT = 150;
 const MAX_SPEED = 1;
 const MAX_RADIUS = 1;
-const CONNECT_DISTANCE = 150;
-const COLOR = '#F2F2F2'
+const CONNECT_DISTANCE = 250;
+const LINE_WIDTH = 1;
+const PARTICLE_COLOR = '#F2F2F2'
 
 let particles = [];
 
-function draw(p) {
-  ctx.beginPath();
-  ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-  ctx.fillStyle = COLOR;
-  ctx.fill();
+function drawParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.globalCompositeOperation = "lighter";
+
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i];
+    
+    //Create circle (particle)
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = PARTICLE_COLOR;
+    ctx.fill();
+
+    //optional
+    //ctx.strokeStyle = 'orange';
+    //ctx.stroke();
+  }
+
+  connectParticles();
 }
 
-function connect() {
-  let opacity = 1;
+function connectParticles() {
+  let strokeOpacity = 1;
   for (let i = 0; i < particles.length; i++) {
     let p1 = particles[i];
 
     for (let j = 0; j < particles.length; j++) {
       let p2 = particles[j];
 
-      let a = p1.x - p2.x;
-      let b = p1.y - p2.y;
-      let c = Math.sqrt(a * a + b * b);
+      //Pythagorean theorem for distance
+      let sideA = p2.x - p1.x;
+      let sideB = p2.y - p1.y;
+      let distance = Math.sqrt(sideA * sideA + sideB * sideB);
 
-      if (c < CONNECT_DISTANCE) {
-        let opacity = 1 - (c / 20000);
-        ctx.strokeStyle = 'rgba(242, 242, 242,' + opacity + ')';
-        ctx.lineWidth = 0.01;
+      //Create line if within distance
+      if (distance < CONNECT_DISTANCE) {
+        strokeOpacity = 1 - distance / 100; //TODO
+        
         ctx.beginPath();
+
+         //Gives the connected lines a specific opacity baseed on distance to each other
+        ctx.strokeStyle = 'rgba(242, 242, 242,' + strokeOpacity + ')'; 
+        
         ctx.moveTo(p1.x, p1.y);
         ctx.lineTo(p2.x, p2.y);
+        ctx.lineWidth = LINE_WIDTH;
         ctx.stroke();
       }
     }
   }
 }
 
-function move(p) {
+function moveParticles() {
 
-  if (p.x + p.radius > canvas.width || p.x - p.radius < 0) {
-    p.dx *= -1;
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i];
+    
+    //Collision detection
+    if (p.x + p.radius > canvas.width || p.x - p.radius < 0) {
+      p.dx *= -1;
+    }
+
+    if (p.y + p.radius > canvas.height || p.y - p.radius < 0) {
+      p.dy *= -1;
+    }
+
+    //Move particle
+    p.x += p.dx;
+    p.y += p.dy;
   }
 
-  if (p.y + p.radius > canvas.height || p.y - p.radius < 0) {
-    p.dy *= -1;
-  }
-
-  p.x += p.dx;
-  p.y += p.dy;
 }
 
 function init() {
+  
+  //Populate particles array
   for (let i = 0; i < PARTICLE_AMOUNT; i++) {
     particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      dx: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between 1 and -1
-      dy: (Math.random() * MAX_SPEED) - MAX_SPEED / 2,
-      radius: Math.random() * MAX_RADIUS + 1
+      x: Math.random() * canvas.width,  //Between 0 and canvas.width ?
+      y: Math.random() * canvas.height, //Between 0 and canvas.height ?
+      dx: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
+      dy: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
+      radius: Math.random() * MAX_RADIUS + 1 //Between 1 and MAX_RADIUS ?
     });
   }
 }
 
 function update() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawParticles();
+  moveParticles();
 
-  for (let i = 0; i < particles.length; i++) {
-    draw(particles[i]);
-    connect();
-  }
   requestAnimationFrame(update);
 }
 
