@@ -40,7 +40,6 @@ body{
     font-family: 'Montserrat', monospace;
     font-size: 1.8rem;
     color: var(--secondary-color);
-    text-align: center;
 }
 
 /******************
@@ -77,11 +76,12 @@ CLASS SELECTORS
 .nav{
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    align-items: center;
+    position: fixed;
     flex-wrap: wrap;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 30px 30px;    
+    padding: 30px 30px;
     background-color: var(--primary-color);
     z-index: 9999;
 }
@@ -99,7 +99,7 @@ CLASS SELECTORS
 .nav a{
     text-decoration: none;
     color: var(--secondary-color);
-    transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s; /*TODO*/
 }
 
 .nav a:hover{
@@ -107,7 +107,7 @@ CLASS SELECTORS
 }
 
 .logo{
-    font-size: 2rem;
+    font-size: 2rem; /*TODO*/
 }
 
 .hamburger{
@@ -125,21 +125,26 @@ CLASS SELECTORS
 
 .about-section{
     background: rgba(0,0,0, 0.5);
-    margin-bottom: 50px;
+    margin-top: 120px; /*TODO*/
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row; /*TODO*/
 }
 
 #main{
-    background: var(--secondary-color);
+    background: var(--secondary-color); /*TODO*/
     color: var(--primary-color);
+    padding: 50px;
 }
 
 section{
-    margin-bottom: 50px;
-}
-
-.particle-background
-{
-    /*TODO add particles with js*/
+    margin-bottom: 50px; /*TODO*/
 }
 
 /******************
@@ -153,12 +158,64 @@ MEDIA QUERIES
         margin-top: 10px;
     }
 
-    .nav-links.show{
+    .nav-links li{
+        padding: 0px;
+    }
+
+    .nav-links.active{
         display: flex;
-        padding-left: 0;
     }
 
     .hamburger{
         display: block;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted red;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
