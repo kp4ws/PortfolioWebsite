@@ -53,12 +53,6 @@ ul{
 /***************
 ID SELECTORS
 ****************/
-#welcome-message
-{
-    font-size: 32px;
-    font-weight: bold;
-}
-
 #bg-canvas{
     position: absolute;
     top: 0;
@@ -67,7 +61,7 @@ ID SELECTORS
     height: 100%;
     background-color: #0D0D0D;
     z-index: -9999;
-    margin-bottom: 250px;
+    margin-bottom: 250px; /*TODO*/
 }
 
 /******************
@@ -124,27 +118,41 @@ CLASS SELECTORS
 }
 
 .about-section{
-    background: rgba(0,0,0, 0.5);
-    margin-top: 120px; /*TODO*/
-    margin: auto;
+    background: rgba(0,0,0, 0.1);
+    margin: 0 auto;
     width: 50%;
-    border: 3px solid green;
-    padding: 10px;
     margin-top: 100px;
     margin-bottom: 100px;
+    display: grid;
+    grid-template-areas: 
+        "welcome image"
+        "bio social";
+    justify-items: end; /*TODO*/
+    border: 1px solid green;
+}
+.welcome-message{
+    grid-area: welcome;
+    font-size: 50px;
+}
+
+.profile-image{
+    grid-area: image;
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    border-radius: 15%;
+}
+
+.bio{
+    grid-area: bio;
+}
+
+.social-media{
+    grid-area: social;
     display: flex;
+    width: 50%;
     justify-content: space-evenly;
-    flex-direction: row; /*TODO*/
-}
-
-#main{
-    background: var(--secondary-color); /*TODO*/
-    color: var(--primary-color);
-    padding: 50px;
-}
-
-section{
-    margin-bottom: 50px; /*TODO*/
+    align-items: center;
 }
 
 /******************
@@ -169,6 +177,14 @@ MEDIA QUERIES
     .hamburger{
         display: block;
     }
+
+    .about-section{
+        grid-template-areas: 
+            "image"
+            "social"
+            "welcome" 
+            "bio";
+    }
 }
 
 
@@ -176,46 +192,22 @@ MEDIA QUERIES
 
 
 
+/* Container for skill bars */
+.container {
+  width: 80%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  margin: 0 auto;
+}
 
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+  border-radius: 5%;
+}
 
-
-
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted red;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: red;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: red;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+.html {width: 10%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */

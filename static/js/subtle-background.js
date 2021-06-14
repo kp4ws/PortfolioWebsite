@@ -7,7 +7,7 @@ canvas.height = document.body.scrollHeight; //TODO! Make responsive size
 const PARTICLE_AMOUNT = 150;
 const MAX_SPEED = 1;
 const MAX_RADIUS = 1;
-const CONNECT_DISTANCE = 250;
+const CONNECT_DISTANCE = 100;
 const LINE_WIDTH = 1;
 const PARTICLE_COLOR = '#F2F2F2'
 

@@ -46,27 +46,27 @@
         <canvas id="bg-canvas"></canvas>
 
         <!--About section-->
-        <section id="about" class="about-section particle-background">
+        <section id="about" class="about-section">
 
-
-            <div id="welcome-message">
-                <h1>Hello there!</h1>
-                <p>I'm Kent</p>
+            <div class="welcome-message">
+                <h1>Hello there! I'm Kent</h1>
             </div>
-            <div id="bio">
-                <p>I love to learn new things</p>
+
+            <div class="bio">
+                <p>I love to learn new things and my creative mind greatly aids in my problem solving skills.</p>
             </div>
 
             <!--Profile Image-->
-            <img src="/images/profile-image.jpg" width="350" height="350" alt="" />
+            <div class="profile"> <!--TODO turn this into a flexbox???-->
+                <img class="profile-image" src="/images/profile-image.jpg" alt="" />
 
-            <!--Social Media imgs-->
-            <div class="tooltip" style="z-index: 1000;">
-                <a><i class="fab fa-github-square"></i><span class="tooltiptext">GitHub</span></a>
+                <!--Social Media imgs-->
+                <div class="social-media">
+                    <a><i class="fab fa-github-square fa-lg"></i></a>
+                    <a><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a><i class="fab fa-itch-io fa-lg"></i></a>
+                </div>
             </div>
-
-            <a><i class="fab fa-linkedin"></i><span class="tooltip">Linkedin</span></a>
-            <a><i class="fab fa-itch-io"></i><span class="tooltip">Itch.io</span></a>
 
         </section>
     </header>
@@ -111,10 +111,31 @@
 
     <footer id="footer">
         <!--Copyright section-->
-        <section id="copyright" class="particle-background">
+        <section id="copyright" class="copyright-section">
             <p>Copyright (c) 2021 Kent Pawson</p>
         </section>
     </footer>
+
+
+    <p>HTML</p>
+    <div class="container">
+        <div class="skills html">90%</div>
+    </div>
+
+    <p>CSS</p>
+    <div class="container">
+        <div class="skills css">80%</div>
+    </div>
+
+    <p>JavaScript</p>
+    <div class="container">
+        <div class="skills js">65%</div>
+    </div>
+
+    <p>PHP</p>
+    <div class="container">
+        <div class="skills php">60%</div>
+    </div>
 
     <script src="/js/menu.js"></script>
     <script src="/js/subtle-background.js"></script>
