@@ -192,22 +192,32 @@ MEDIA QUERIES
 
 
 
-/* Container for skill bars */
-.container {
-  width: 80%; /* Full width */
-  background-color: #ddd; /* Grey background */
-  margin: 0 auto;
+.skill-container {
+    width: 25%;
+    display: grid;
 }
 
-.skills {
-  text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
-  color: white; /* White text color */
-  border-radius: 5%;
+.skill-bg {
+    background-color: red;
+    border-radius: 10px;
+}
+	
+.skill-fg {
+    background-color: rgb(116, 194, 92);
+	color: white;
+	padding: 1%;
+	text-align: right;
+	font-size: 20px;
+    /*TODO add dynamic styling to height*/height: 20px;
+    border-radius: 10px;
 }
 
-.html {width: 10%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
+ .skill-title {
+     display: flex !important;
+     justify-content: space-between;
+}
+
+
+.html {width: 10%;}
+.css {width: 80%;}
+.js {width: 65%;}
