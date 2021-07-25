@@ -56,11 +56,13 @@ ID SELECTORS
     top: 0;
     left: 0;
     width: 100%;
-    height: 350px;
     background-color: var(--primary-color);
     z-index: -9999;
-    margin-bottom: 250px;
-    /*TODO*/
+    /*TODO fix height issue*/
+}
+
+#main {
+    background-color: var(--secondary-color);
 }
 
 /******************
@@ -118,6 +120,16 @@ CLASS SELECTORS
 .hamburger:hover {
     color: var(--highlight-color);
 }
+
+/*********************************************
+
+    
+    TODO: WORK ON STUFF BELOW......
+        -Update font size
+
+
+
+**********************************************/
 
 .about-section {
     background: rgba(0, 0, 0, 0.1);
@@ -257,6 +269,52 @@ MEDIA QUERIES
     background-color: var(--foreground-color);
 }
 
-.blog-column { 
+.blog-column {
     background-color: var(--foreground-color);
+}
+
+.contact-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: var(--foreground-color);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.form-field {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.form-label {}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.submit-button {
+    border-style: solid;
+    border-width: 0 1px 4px 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.copyright-section {
+    text-align: center;
+    color: var(--secondary-color);
 }

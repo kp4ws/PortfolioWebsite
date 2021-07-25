@@ -17,8 +17,9 @@
 </head>
 
 <body>
-    <canvas id="bg-canvas"></canvas>
     <header id="header">
+        <canvas id="bg-canvas" style="top: 0; left: 0;"></canvas>
+
         <!--Nav bar items-->
         <nav id="navbar" class="nav">
 
@@ -303,7 +304,7 @@
 
                             <div class="external-icons">
                                 <a><i class="fas fa-external-link-alt"></i></a>
-                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                                <a><i class="fab fa-github-square fa"></i></a>
                             </div>
 
                         </div>
@@ -323,7 +324,7 @@
                     <!--TODO: Change name for this div?-->
                     <div class="blog-column" style="text-align: center;">
 
-                        <img src="" alt="" />
+                        <img src="/images/blog_temp.png" alt="" />
 
                         <div class="blog-bio" style="margin: 0 auto; width: 80%;">
 
@@ -340,8 +341,7 @@
                             </div>
 
                             <div class="external-icons">
-                                <a><i class="fas fa-external-link-alt-lg"></i></a>
-                                <!--Does lg actually make this large?-->
+                                <a><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -350,33 +350,50 @@
             </div>
         </section>
 
-        <section class="experience-section">
+        <!-- <section class="experience-section">
             <h2>Experience</h2>
-        </section>
+        </section> -->
 
         <!--Contact section-->
         <section class="contact-section">
-            <h2>Contact</h2>
-            <form>
-                <div class="field">
-                    <input type="text" placeholder="Name">
-                </div>
-                <div class="field">
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="field">
-                    <textarea rows="3" cols="24" placeholder="Message"></textarea>
+            <div class="main-container">
+                <h2 class="section-heading">Contact</h2>
+
+                <div class="contact-container">
+
+                    <form class="contact-form" style="width: 55%;">
+
+                        <!-- <input type="hidden"> TODO use this for bots -->
+
+                        <div class="form-field">
+                            <label for="name" class="form-label">Name</label>
+                            <input class="form-input" type="text" placeholder="Name" id="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="name" class="form-label">Email</label>
+                            <input class="form-input" type="email" placeholder="Email" id="email">
+                        </div>
+                        <div class="form-field">
+                            <label for="name" class="form-label">Message</label>
+                            <textarea class="form-input" rows="3" cols="24" placeholder="Message"
+                                id="message"></textarea>
+                        </div>
+
+                        <button class="submit-button" type="submit">Submit</button>
+                    </form>
                 </div>
 
-                <button id="submit-btn" type="submit">Submit</button>
-            </form>
+            </div>
+
         </section>
     </main>
 
+
     <footer id="footer">
+
         <!--Copyright section-->
-        <section id="copyright" class="copyright-section">
-            <p>Copyright (c) 2021 Kent Pawson</p>
+        <section class="copyright-section">
+            <p>Copyright &copy 2021 Kent Pawson</p>
         </section>
     </footer>
 

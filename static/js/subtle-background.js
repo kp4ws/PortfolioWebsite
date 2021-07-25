@@ -91,11 +91,11 @@ function init() {
   //Populate particles array
   for (let i = 0; i < PARTICLE_AMOUNT; i++) {
     particles.push({
-      x: Math.random() * canvas.width,  //Between 0 and canvas.width ?
-      y: Math.random() * canvas.height, //Between 0 and canvas.height ?
+      x: Math.random() * canvas.width,  //Between 0 and canvas.width 
+      y: Math.random() * canvas.height, //Between 0 and canvas.height 
       dx: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
       dy: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
-      radius: Math.random() * MAX_RADIUS + 1 //Between 1 and MAX_RADIUS ?
+      radius: Math.random() * MAX_RADIUS + 1 //Between 1 and MAX_RADIUS 
     });
   }
 }
