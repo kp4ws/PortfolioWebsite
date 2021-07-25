@@ -17,8 +17,8 @@
 </head>
 
 <body>
+    <canvas id="bg-canvas"></canvas>
     <header id="header">
-
         <!--Nav bar items-->
         <nav id="navbar" class="nav">
 
@@ -43,10 +43,9 @@
 
         </nav>
 
-        <canvas id="bg-canvas"></canvas>
 
         <!--About section-->
-        <section id="about" class="about-section">
+        <section class="about-section">
 
             <div class="welcome-message">
                 <h1>Hello there! I'm Kent</h1>
@@ -57,7 +56,7 @@
             </div>
 
             <!--Profile Image-->
-            <div class="profile"> <!--TODO turn this into a flexbox???-->
+            <div class="profile">
                 <img class="profile-image" src="/images/profile-image.jpg" alt="" />
 
                 <!--Social Media imgs-->
@@ -69,42 +68,294 @@
             </div>
 
         </section>
+
     </header>
 
     <main id="main">
-        <!--Skills section-->
-        <section id="skills">
-            <h2>Skills</h2>
 
-            <div class="col1">
-                <div class="skill-title" style="display:flex; justify-content: space-between;">
-                    <p>HTML</p>
-                    <p><strong>Novice</strong></p>
-                </div>
-                <div class="skill-bg">
-                    <div class="skill-fg html">
-                        <!--40%-->
+        <!--Skills section-->
+        <section class="skill-section">
+
+            <div class="main-container">
+                <h2 class="section-heading">Skills</h2>
+
+                <div class="skill-container">
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>Java</strong></p>
+                            <p>Advanced</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg java"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>JavaScript</strong></p>
+                            <p>Intermediate</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg js"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>C/C++</strong></p>
+                            <p>Novice</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg cpp"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>C#</strong></p>
+                            <p>Advanced</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg cs"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>SQL</strong></p>
+                            <p>Advanced</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg sql"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-column">
+                        <div class="skill-title">
+                            <p><strong>Python</strong></p>
+                            <p>Intermediate</p>
+                        </div>
+                        <div class="skill-bg">
+                            <div class="skill-fg py"></div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-            <div class="skill-container">
-                <p>Java</p>
-            </div>
         </section>
 
         <!--Projects section-->
-        <section id="projects">
-            <h2>Projects</h2>
+        <section class="project-section">
+
+            <div class="main-container">
+                <h2 class="section-heading">Projects</h2>
+
+                <div class="project-container">
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="/images/project_temp.png" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="/images/project_temp.png" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="/images/project_temp.png" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="/images/project_temp.png" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="/images/project_temp.png" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="project-column" style="text-align: center;">
+
+                        <img src="" alt="" />
+
+                        <div class="proj-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="project-title" style="font-weight: bold;">
+                                <p>Portal Escape</p>
+                            </div>
+
+                            <div class="project-technologies" style="margin-bottom: 20px;">
+                                <p>C#, Unity</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Platformer game where you have to escape the maze.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt"></i></a>
+                                <a><i class="fab fa-github-square fa-lg"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
         <!--Blog section-->
-        <section id="blog">
-            <h2>Blog</h2>
+        <section class="blog-section">
+            <div class="main-container">
+                <h2 class="section-heading">Blog</h2>
+
+                <div class="project-container">
+                    <!--TODO: Change name for this div?-->
+                    <div class="blog-column" style="text-align: center;">
+
+                        <img src="" alt="" />
+
+                        <div class="blog-bio" style="margin: 0 auto; width: 80%;">
+
+                            <div class="blog-title" style="font-weight: bold;">
+                                <p>Procedural Terrain</p>
+                            </div>
+
+                            <div class="blog-technologies" style="margin-bottom: 20px;">
+                                <p>April 2021 - 9 min read</p>
+                            </div>
+
+                            <div class="project-description" style="text-align: left; margin-bottom: 20px;">
+                                <p>Procedurally generated terrain system I built in Unity for my Emerging Trends.</p>
+                            </div>
+
+                            <div class="external-icons">
+                                <a><i class="fas fa-external-link-alt-lg"></i></a>
+                                <!--Does lg actually make this large?-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2>Experience</h2>
         </section>
 
         <!--Contact section-->
-        <section id="contact">
+        <section class="contact-section">
             <h2>Contact</h2>
             <form>
                 <div class="field">
@@ -130,9 +381,7 @@
     </footer>
 
     <script src="/js/menu.js"></script>
-    <!--
-        <script src="/js/subtle-background.js"></script>
-    -->
+    <script src="/js/subtle-background.js"></script>
 </body>
 
 </html>
