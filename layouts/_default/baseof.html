@@ -4,10 +4,13 @@
 
 <body>
     {{ partial "header.html" . }}
-    <div id="content">
+
+    <main id="main">
         {{ block "main" . }}{{ end }}
-    </div>
+    </main>
+
     {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
 </body>
 
 </html>

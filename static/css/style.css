@@ -267,6 +267,7 @@ MEDIA QUERIES
 
 .project-column {
     background-color: var(--foreground-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .blog-column {
@@ -279,17 +280,32 @@ MEDIA QUERIES
 }
 
 .contact-form {
-    background-color: var(--foreground-color);
+    /* background-color: var(--foreground-color);
+    width: 75%;
+    margin: 0 auto; */
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
     width: 75%;
     margin: 0 auto;
 }
 
 .form-field {
-    width: 95%;
-    margin: 0 auto;
+    /* width: 95%;
+    margin: 0 auto; */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
 }
 
-.form-label {}
+.form-label {
+    line-height: 1;
+}
 
 .form-input {
     display: block;
@@ -301,7 +317,7 @@ MEDIA QUERIES
 }
 
 .submit-button {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 0 1px 4px 1px;
     text-transform: uppercase;
     display: inline-block;
@@ -311,7 +327,17 @@ MEDIA QUERIES
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    margin: 0 auto;
+    margin: 0 auto; */
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
 }
 
 .copyright-section {

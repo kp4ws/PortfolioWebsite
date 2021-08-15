@@ -1,13 +1,51 @@
-<!--
+<header id="header">
+    <canvas id="bg-canvas" style="top: 0; left: 0;"></canvas>
 
-    <header>
-        <div class="container-fluid text-center" style="background-color: #00AAAE;">
-            <h1 id="site-title">pawson.dev</h1>
-            <nav id="nav-bar">
-                {{ range .Site.Menus.main }}
-                <a class="navigation-link" href="{{ .URL }}">{{ .Name }}</a>
-                {{ end }}
-            </nav>
+    <!--Nav bar items-->
+    <nav id="navbar" class="nav">
+
+        <div class="logo">
+            <a href="#about">
+                <h3>pawson.dev</h3>
+            </a>
         </div>
-    </header>
--->
+
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--About section-->
+    <section class="about-section">
+    
+        <div class="welcome-message">
+            <h1>Hello there! I'm Kent</h1>
+        </div>
+    
+        <div class="bio">
+            <p>I love to learn new things and my creative mind greatly aids in my problem solving skills.</p>
+        </div>
+    
+        <!--Profile Image-->
+        <div class="profile">
+            <img class="profile-image" src="/images/profile-image.jpg" alt="" />
+    
+            <!--Social Media imgs-->
+            <div class="social-media">
+                <a><i class="fab fa-github-square fa-lg"></i></a>
+                <a><i class="fab fa-linkedin fa-lg"></i></a>
+                <a><i class="fab fa-itch-io fa-lg"></i></a>
+            </div>
+        </div>
+    
+    </section>
+    
+</header>
