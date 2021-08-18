@@ -2,7 +2,7 @@ const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = document.body.scrollHeight; //TODO! Make responsive size
+canvas.height = document.body.scrollHeight;
 
 const PARTICLE_AMOUNT = 150;
 const MAX_SPEED = 1;
@@ -110,3 +110,7 @@ function update() {
 init();
 update();
 
+window.addEventListener('resize', function(){
+  canvas.width = window.innerWidth;
+  canvas.height = document.body.scrollHeight;
+});

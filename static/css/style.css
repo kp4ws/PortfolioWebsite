@@ -55,7 +55,7 @@ ID SELECTORS
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 115%; /*TODO not sure why this needs to be set to 115%?*/
     background-color: var(--primary-color);
     z-index: -9999;
     /*TODO fix height issue*/
@@ -167,31 +167,6 @@ CLASS SELECTORS
     align-items: center;
 }
 
-/******************
-MEDIA QUERIES
-*******************/
-
-@media (max-width: 700px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .nav-links li {
-        padding: 0px;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: block;
-    }
-    .about-section {
-        grid-template-areas: "image" "social" "welcome" "bio";
-    }
-}
-
 .section-heading {
     text-align: center;
     font-size: 42px;
@@ -267,16 +242,26 @@ MEDIA QUERIES
 
 .project-column {
     background-color: var(--foreground-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* TODO make lighter shadows */
+}
+
+.blog-container {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .blog-column {
     background-color: var(--foreground-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* TODO make lighter shadows */
 }
 
 .contact-container {
     width: 75%;
     margin: 0 auto;
+
 }
 
 .contact-form {
@@ -328,8 +313,8 @@ MEDIA QUERIES
     text-decoration: none;
     vertical-align: middle;
     margin: 0 auto; */
-    background-color: #04AA6D;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -337,10 +322,44 @@ MEDIA QUERIES
 }
 
 .submit-button:hover {
-    background-color: #45a049;
+    background-color: darkred;
 }
 
 .copyright-section {
     text-align: center;
     color: var(--secondary-color);
+}
+
+/******************
+MEDIA QUERIES
+*******************/
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        padding: 0px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .about-section {
+        grid-template-areas: "image" "social" "welcome" "bio";
+    }
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
 }
