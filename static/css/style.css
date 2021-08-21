@@ -31,16 +31,41 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: var(--secondary-color);
-    font-family: 'Montserrat', monospace;
-    font-size: 1.8rem;
-    color: var(--primary-color);
+/* 1200px / 16px = 75em */
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
 }
 
 /******************
 ELEMENT SELECTORS
 *******************/
+
+body {
+    background-color: var(--secondary-color);
+    font-family: 'Montserrat', monospace;
+    font-size: 1.8rem;
+    /*TODO look back at this*/
+    color: var(--primary-color);
+}
 
 ul {
     list-style: none;
@@ -55,7 +80,8 @@ ID SELECTORS
     position: absolute;
     top: 0;
     left: 0;
-    width: 115%; /*TODO not sure why this needs to be set to 115%?*/
+    width: 115%;
+    /*TODO not sure why this needs to be set to 115%?*/
     background-color: var(--primary-color);
     z-index: -9999;
     /*TODO fix height issue*/
@@ -88,7 +114,7 @@ CLASS SELECTORS
 
 .nav-links li {
     display: inline-block;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 0px 15px;
 }
 
@@ -104,7 +130,7 @@ CLASS SELECTORS
 }
 
 .logo {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     /*TODO*/
 }
 
@@ -114,7 +140,7 @@ CLASS SELECTORS
     display: none;
     color: var(--secondary-color);
     cursor: pointer;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .hamburger:hover {
@@ -132,44 +158,21 @@ CLASS SELECTORS
 **********************************************/
 
 .about-section {
-    background: rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    width: 50%;
-    margin-top: 100px;
     display: grid;
-    grid-template-areas: "welcome image" "bio social";
-    justify-items: end;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(0, 0, 0, 0.4);
     color: var(--secondary-color)
 }
 
-.welcome-message {
-    grid-area: welcome;
-    font-size: 50px;
-}
-
 .profile-image {
-    grid-area: image;
-    display: inline-block;
-    width: 40%;
+    width: 20rem;
     height: auto;
-    border-radius: 15%;
-}
-
-.bio {
-    grid-area: bio;
-}
-
-.social-media {
-    grid-area: social;
-    display: flex;
-    width: 50%;
-    justify-content: space-evenly;
-    align-items: center;
+    border-radius: 50%;
 }
 
 .section-heading {
     text-align: center;
-    font-size: 42px;
+    /* font-size: 42px; */
     color: var(--primary-color);
 }
 
@@ -238,11 +241,13 @@ CLASS SELECTORS
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    text-align: center;
 }
 
 .project-column {
     background-color: var(--foreground-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* TODO make lighter shadows */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* TODO make lighter shadows */
 }
 
 .blog-container {
@@ -255,13 +260,13 @@ CLASS SELECTORS
 
 .blog-column {
     background-color: var(--foreground-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* TODO make lighter shadows */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* TODO make lighter shadows */
 }
 
 .contact-container {
     width: 75%;
     margin: 0 auto;
-
 }
 
 .contact-form {
@@ -296,7 +301,7 @@ CLASS SELECTORS
     display: block;
     width: 100%;
     padding: 0.375rem .75rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 400;
     line-height: 1.5;
 }
@@ -351,7 +356,7 @@ MEDIA QUERIES
         display: block;
     }
     .about-section {
-        grid-template-areas: "image" "social" "welcome" "bio";
+        grid-template-columns: 1fr;
     }
     .skill-container {
         grid-template-columns: 1fr;
