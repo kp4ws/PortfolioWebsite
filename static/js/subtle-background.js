@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = document.body.scrollHeight;
 
 const MAX_SPEED = 0.2;
-const MAX_RADIUS = 2;
+const MAX_RADIUS = 5;
 const LINE_WIDTH = 1;
 const PARTICLE_COLOR = 'rgb(192,192,192)';
 
@@ -170,7 +170,7 @@ function update() {
 init();
 update();
 
-window.addEventListener('resize', function(){ debugger
+window.addEventListener('resize', function(){
   canvas.width = window.innerWidth;
   canvas.height = document.body.scrollHeight;
   init();

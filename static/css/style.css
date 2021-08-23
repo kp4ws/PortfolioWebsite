@@ -136,7 +136,7 @@ CLASS SELECTORS
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .hamburger {
@@ -152,25 +152,15 @@ CLASS SELECTORS
     color: var(--highlight-color);
 }
 
-/*********************************************
-
-    
-    TODO: WORK ON STUFF BELOW......
-        -Update font size
-
-
-
-**********************************************/
-
 .about-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55%;
-    margin: 100px auto 0 auto;
+    width: 60%;
+    margin: 100px auto 100px auto;
     height: 50vh;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 50px;
     color: var(--secondary-color);
 }
@@ -184,12 +174,12 @@ CLASS SELECTORS
 
 .section-heading {
     text-align: center;
-    /* font-size: 42px; */
+    font-size: 3.5rem;
     color: var(--primary-color);
 }
 
 .external-links {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -198,24 +188,20 @@ CLASS SELECTORS
 }
 
 .bio-header { 
-    margin-bottom: 10px; 
+    margin-bottom: 25px; 
     font-size: 5rem; 
-    width: 300px;
 }
 
 .bio-subheader {
     font-size: 1.5rem; 
-    width: 350px;
 }
 
-
-
-
-
-
-
-
-
+@media (min-width: 1400px)
+{
+    .bio-subheader {
+        width: 500px;
+    }
+}
 
 .main-container {
     width: 80%;
