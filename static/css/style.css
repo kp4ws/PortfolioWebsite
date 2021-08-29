@@ -203,13 +203,6 @@ CLASS SELECTORS
     }
 }
 
-.main-container {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 100px;
-    /*TODO Delete later*/
-}
-
 .skill-container {
     width: 75%;
     margin: 0 auto;
@@ -263,12 +256,13 @@ CLASS SELECTORS
 }
 
 .project-container {
-    width: 75%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    text-align: center;
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
 .project-column {
@@ -278,10 +272,10 @@ CLASS SELECTORS
 }
 
 .blog-container {
-    width: 75%;
+    width: 25%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -366,7 +360,8 @@ CLASS SELECTORS
 MEDIA QUERIES
 *******************/
 
-@media (max-width: 700px) {
+/*Small devices*/
+@media (max-width: 600px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -395,3 +390,9 @@ MEDIA QUERIES
         grid-template-columns: 1fr;
     }
 }
+
+/*Medium devices*/
+@media (max-width: 768px) {
+
+}
+
