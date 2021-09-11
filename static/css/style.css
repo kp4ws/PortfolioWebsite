@@ -70,9 +70,69 @@ body {
 }
 
 /******************
-MAIN STYLES
+NAV BAR
 *******************/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 30px;
+    background-color: var(--primary-color);
+    z-index: 9999;
+}
 
+.nav-links, .external-links {
+    list-style: none;
+}
 
+.nav-links li, .external-links li {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0px 15px;
+}
 
+.nav a, .external-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.2s ease 0s;
+}
 
+.nav a:hover, .external-links a:hover {
+    color: var(--highlight-color);
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.hamburger:hover {
+    color: var(--highlight-color);
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        padding: 0px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+}
