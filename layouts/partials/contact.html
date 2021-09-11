@@ -1,5 +1,5 @@
+<!--TODO: Add custom thank you page-->
 <div class="contact-container">
-    <!--TODO: Add custom thank you page-->
     <form name="contact" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
 
         <p style="visibility: hidden;">
@@ -13,16 +13,9 @@
         <input class="form-field" type="email" id="email" name="email" placeholder="Your email.." />
 
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-field" id="message" name="message" placeholder="Write something.."
-            style="height:200px; max-height: 10px;"></textarea>
+        <textarea class="form-field" id="message" name="message" placeholder="Write something.." rows="10" cols="24"></textarea>
 
         <div data-netlify-recaptcha></div>
         <button class="submit-button" type="submit">Send</button>
-
-        <!-- <div class="form-field">
-                    <label for="name" class="form-label">Message</label>
-                    <textarea class="form-input" rows="3" cols="24" placeholder="Message" id="message"></textarea>
-                </div> -->
-
     </form>
 </div>

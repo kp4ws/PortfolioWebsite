@@ -2,10 +2,10 @@
     <div class="skill-column">
         <div class="skill-title">
             <p><strong>{{ .Title }}</strong></p>
-            <p>{{ .Params.level }}</p>
+            <p>{{ .Params.subtitle }}</p>
         </div>
         <div class="skill-bg">
-            <div class="skill-fg {{ .Params.skill }}"></div>
+            <div class="skill-fg" style="width: {{ .Params.level }}%;"></div>
         </div>
     </div>
 </article>
