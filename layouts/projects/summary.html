@@ -1,0 +1,26 @@
+<article class="project-container">
+    
+    {{ with .Resources.GetMatch "*.jpg" }}
+    <!-- {{ with .Resize "300x webp"}} -->
+    <img class="project-image" src="{{ .RelPermalink }}" width="{{ .Width}}" height="{{ .Height }}" alt="">
+    <!-- {{ end }} -->
+    {{ end }}
+
+    <div class="project-title">
+        <p>{{ .Title }}</p>
+    </div>
+
+    <div class="project-technologies">
+        <p>{{ delimit .Params.tags ", " }}</p>
+    </div>
+
+    <div class="project-description">
+        <p>{{ .Content }}</p>
+    </div>
+
+    <div class="external-icons">
+        <a href="{{ .Params.link }}"><i class="fas fa-external-link-alt"></i></a>
+        <a href="{{ .Params.github }}"><i class="fab fa-github-square fa-lg"></i></a>
+    </div>
+    
+</article>
