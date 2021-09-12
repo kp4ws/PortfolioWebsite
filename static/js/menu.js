@@ -3,7 +3,7 @@ const navLinks = document.getElementById('nav-links');
 
 function hamburgerMenu()
 {
-    hamburger.innerHTML = navLinks.classList.contains("active") ? "<i class='fas fa-bars'></i>" : "<i class='fas fa-times'></i>";
+    hamburger.innerHTML = navLinks.classList.contains("active") ? "<i class='icon-font fas fa-bars'></i>" : "<i class='icon-font fas fa-times'></i>";
     navLinks.classList.toggle('active');
 }
 
