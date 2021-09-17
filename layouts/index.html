@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<!--About section-->
+<section class="about-section" id="about">
+    {{ partial "about.html" . }}
+</section>
+
+<!--Skills section-->
+<section class="skill-section" id="skills">
+    <h3 class="section-heading">Skills</h3>
+    <article class="skill-container">
+        {{ range where .Site.RegularPages "Type" "skills" }}
+        {{ .Render "summary"}}
+        {{ end }}
+    </article>
+</section>
+
+<!--Projects section-->
+<section class="project-section" id="projects">
+    <h3 class="section-heading">Projects</h3>
+    {{ range where .Site.RegularPages "Type" "projects" }}
+    {{ .Render "summary"}}
+    {{ end }}
+</section>
+
+<!--Blog section-->
+<section class="blog-section" id="blogs">
+    <h3 class="section-heading">Blogs</h3>
+    {{ range where .Site.RegularPages "Type" "blogs" }}
+    {{ .Render "summary"}}
+    {{ end }}
+</section>
+
+<!-- FUTURE UPDATE:
+    
+    <section class="experience-section">
+            <h3>Experience</h3>
+        </section> 
+    
+-->
+
+<!--Contact section-->
+<section class="contact-section" id="contact">
+    <h3 class="section-heading">Contact</h3>
+    {{ partial "contact.html" . }}
+</section>
+
+{{end}}

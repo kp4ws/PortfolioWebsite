@@ -5,6 +5,7 @@ VARIABLES
 :root {
     --primary-color: #0D0D0D;
     --secondary-color: #F2F2F2;
+    --fill-color: #c0c0c0;
     --foreground-color: #FFF;
     --highlight-color: #FFAF7A;
     /* TODO set header and subheader sizes */
@@ -42,9 +43,10 @@ BODY TAG
 
 body {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-family: 'Montserrat', monospace;
     font-size: 1.8rem;
-    color: var(--primary-color);
+    /*18px*/
 }
 
 /******************
@@ -53,18 +55,22 @@ FONT
 
 .header-font {
     font-size: 2rem;
+    /*20px*/
 }
 
-.sub-font {
-    font-size: 1.5rem;
+.default-font {
+    font-size: 1.8rem;
+    /*18px*/
 }
 
-.small-font {
-    font-size: 0.8rem;
+.secondary-font {
+    font-size: 1.4rem;
+    /*14px*/
 }
 
 .icon-font {
     font-size: 2rem;
+    /*20px TODO: change this appropriately*/
 }
 
 /******************
@@ -98,13 +104,13 @@ ul {
 }
 
 .nav-links li {
-    padding: 0px 0 5px 0;
+    padding-top: 20px;
     font-weight: bold;
 }
 
-.nav-links li:first-child {
+/* .nav-links li:first-child {
     padding-top: 20px;
-}
+} */
 
 .nav-links.active {
     display: flex;
@@ -129,12 +135,53 @@ ul {
 }
 
 /******************
+SKILLS SECTION
+*******************/
+
+.skill-container {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.skill-column {
+    padding: 3rem;
+}
+
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skill-bg {
+    background-color: var(--fill-color);
+    border-radius: 0.5rem;
+}
+
+.skill-fg {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/******************
 MEDIA QUERIES
 *******************/
 
 /* Portrait phones */
 
 @media (min-width: 576px) {
+    .skill-title {
+        flex-direction: row;
+    }
+    
+    .skill-container {
+        width: 75%;
+        grid-template-columns: 1fr 1fr;
+    }
+
     html {
         font-size: 55%;
     }
@@ -144,7 +191,7 @@ MEDIA QUERIES
 
 @media (min-width: 768px) {
     .nav-links {
-        display: inline-block;
+        display: block;
         flex-direction: row;
         width: auto;
     }
@@ -155,7 +202,6 @@ MEDIA QUERIES
     .nav-links li:first-child {
         padding-top: 0px;
     }
-
     .hamburger {
         display: none;
     }
