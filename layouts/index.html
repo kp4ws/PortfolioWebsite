@@ -28,9 +28,11 @@
 <!--Blog section-->
 <section class="blog-section" id="blogs">
     <h3 class="section-heading">Blogs</h3>
-    {{ range where .Site.RegularPages "Type" "blogs" }}
-    {{ .Render "summary"}}
-    {{ end }}
+    <article class="blog-container">
+        {{ range where .Site.RegularPages "Type" "blogs" }}
+        {{ .Render "summary"}}
+        {{ end }}
+    </article>
 </section>
 
 <!-- FUTURE UPDATE:

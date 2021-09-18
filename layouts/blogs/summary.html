@@ -1,22 +1,16 @@
-<article class="blog-container">
+<article class="blog-column shadow">
+    
+    {{ with .Resources.GetMatch "*.png" }}
+    <img class="blog-image" src="{{ .RelPermalink }}" width="200" height="200" alt="">
+    {{ end }}
 
-    <div class="blog-column" style="text-align: center;">
-
-        {{ with .Resources.GetMatch "*.jpg" }}
-            {{ with .Resize "300x webp"}}
-                <img class="blog-image" src="{{ .RelPermalink }}" width="{{ .Width}}" height="{{ .Height }}" alt="">
-            {{ end }}
-        {{ end }}
-
+    <div class="project-bio">
         <div class="blog-title">
-            <p>{{ .Title }}</p>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Date.Format "January 2006" }} - {{ .Params.time }} min read</p>
         </div>
 
-        <div class="blog-stats">
-            <p>{{ .Date }} - {{ .Params.time }} min read</p>
-        </div>
-
-        <div class="project-description">
+        <div class="blog-description">
             <p>{{ .Content }}</p>
         </div>
 
@@ -25,4 +19,5 @@
         </ul>
 
     </div>
+
 </article>

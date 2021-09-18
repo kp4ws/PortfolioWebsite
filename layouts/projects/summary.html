@@ -7,7 +7,7 @@
     <div class="project-bio">
         <div class="project-title">
             <h2>{{ .Title }}</h2>
-            <p>{{ delimit .Params.tags ", " }}</p>
+            <p>{{with .Params.technologies}}{{delimit . ", " }}{{end}}</p>
         </div>
 
         <div class="project-technologies">

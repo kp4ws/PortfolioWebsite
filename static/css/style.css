@@ -73,6 +73,15 @@ ul {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
+section h3 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+section { 
+    padding: 10rem;
+}
+
 /******************
 FONT
 *******************/
@@ -224,6 +233,118 @@ PROJECT STYLES
 .project-description {}
 
 /******************
+BLOG STYLES
+*******************/
+
+.blog-container {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+}
+
+.blog-column {
+    background-color: var(--foreground-color);
+    text-align: left;
+}
+
+.blog-bio {
+    padding: 2.5rem 2.5rem;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+}
+
+.blog-title {
+    margin-bottom: 1rem;
+}
+
+.blog-title h2 {
+    font-weight: bold;
+}
+
+.blog-title p {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #555;
+}
+
+.blog-description {}
+
+/******************
+CONTACT STYLES
+*******************/
+
+.contact-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contact-form {
+    /* background-color: var(--foreground-color);
+    width: 75%;
+    margin: 0 auto; */
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.form-field {
+    /* width: 95%;
+    margin: 0 auto; */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.form-label {
+    line-height: 1;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem .75rem;
+    /* font-size: 1rem; */
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.submit-button {
+    /* border-style: solid;
+    border-width: 0 1px 4px 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #222;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    margin: 0 auto; */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: darkred;
+}
+
+/******************
 MEDIA QUERIES
 *******************/
 
@@ -256,6 +377,9 @@ MEDIA QUERIES
         grid-template-columns: 1fr 1fr;
     }
     .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog-container {
         grid-template-columns: 1fr 1fr;
     }
 }
