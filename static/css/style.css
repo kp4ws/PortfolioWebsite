@@ -77,6 +77,15 @@ section h3 {
     text-align: center;
     font-size: 4rem;
 }
+
+section {
+    margin-top: 15rem;
+}
+
+.section-heading {
+    padding-bottom: 3rem;
+}
+
 /******************
 FONT
 *******************/
@@ -281,7 +290,6 @@ CONTACT STYLES
 .contact-form {
     border-radius: 0.5rem;
     background-color: #f2f2f2;
-    padding: 2rem;
     margin: 0 auto;
 }
 
@@ -291,7 +299,7 @@ CONTACT STYLES
     border: 1px solid #ccc;
     border-radius: 0.4rem;
     box-sizing: border-box;
-    margin: 0.6rem 0 1.6rem 0;
+    margin-bottom: 1.6rem;
     resize: vertical;
 }
 
@@ -317,7 +325,7 @@ CONTACT STYLES
 }
 
 .submit-button:hover {
-    background-color: darkred;
+    background-color: var(--highlight-color);
 }
 
 /******************
@@ -363,8 +371,21 @@ MEDIA QUERIES
 /* Laptops */
 
 @media (min-width: 992px) {
+    .about-container {
+        width: 70%;
+    }
+    .skill-container {
+        width: 70%;
+    }
     .project-container {
         grid-template-columns: 1fr 1fr 1fr;
+        width: 70%;
+    }
+    .blog-container {
+        width: 70%;
+    }
+    .contact-container {
+        width: 70%;
     }
     html {
         font-size: 60%;

@@ -6,8 +6,8 @@
 </section>
 
 <!--Skills section-->
-<section class="skill-section" id="skills">
-    <h3 class="section-heading">Skills</h3>
+<section class="section-section" id="skills">
+    <h3 class="section-heading" style="padding: 0;">Skills</h3>
     <article class="skill-container">
         {{ range where .Site.RegularPages "Type" "skills" }}
         {{ .Render "summary"}}
@@ -45,7 +45,7 @@
 
 <!--Contact section-->
 <section class="contact-section" id="contact">
-    <h3 class="section-heading">Contact</h3>
+    <h3 class="section-heading" style="padding: 0;">Contact</h3>
     {{ partial "contact.html" . }}
 </section>
 
