@@ -34,7 +34,7 @@ html {
 }
 
 /******************
-BODY TAG
+GLOBAL STYLES
 *******************/
 
 body {
@@ -43,6 +43,34 @@ body {
     font-family: 'Montserrat', monospace;
     font-size: 1.8rem;
     /*18px*/
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.external-links {
+    list-style: none;
+    font-size: 3rem;
+    padding-top: 3rem;
+}
+
+.external-links li {
+    display: inline-block;
+}
+
+.external-links a {
+    color: var(--primary-color);
+    transition: all 0.2s ease 0s;
+}
+
+.external-links a:hover {
+    color: var(--highlight-color);
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 /******************
@@ -72,11 +100,6 @@ FONT
 /******************
 NAV BAR
 *******************/
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
 
 .nav {
     display: flex;
@@ -131,7 +154,7 @@ SKILLS SECTION
 *******************/
 
 .skill-container {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -157,6 +180,48 @@ SKILLS SECTION
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
+/******************
+PROJECT STYLES
+*******************/
+
+.project-container {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+}
+
+.project-column {
+    background-color: var(--foreground-color);
+    text-align: left;
+}
+
+.project-bio {
+    padding: 2.5rem 2.5rem;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+}
+
+.project-title {
+    margin-bottom: 1rem;
+}
+
+.project-title h2 {
+    font-weight: bold;
+}
+
+.project-title p {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #555;
+}
+
+.project-description {}
 
 /******************
 MEDIA QUERIES
@@ -190,11 +255,17 @@ MEDIA QUERIES
     .skill-container {
         grid-template-columns: 1fr 1fr;
     }
+    .project-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Laptops */
 
 @media (min-width: 992px) {
+    .project-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     html {
         font-size: 60%;
     }

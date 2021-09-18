@@ -1,28 +1,29 @@
-<article class="project-container">
-    
-    {{ with .Resources.GetMatch "*.jpg" }}
-        {{ with .Resize "300x webp"}}
-            <img class="project-image" src="{{ .RelPermalink }}" width="{{ .Width}}" height="{{ .Height }}" alt="">
-        {{ end }}
+<article class="project-column shadow">
+
+    {{ with .Resources.GetMatch "*.png" }}
+    <img class="project-image" src="{{ .RelPermalink }}" width="200" height="200" alt="">
     {{ end }}
 
-    <div class="project-title">
-        <p>{{ .Title }}</p>
-    </div>
+    <div class="project-bio">
+        <div class="project-title">
+            <h2>{{ .Title }}</h2>
+            <p>{{ delimit .Params.tags ", " }}</p>
+        </div>
 
-    <div class="project-technologies">
-        <p>{{ delimit .Params.tags ", " }}</p>
-    </div>
+        <div class="project-technologies">
+        </div>
 
-    <div class="project-description">
-        <p>{{ .Content }}</p>
-    </div>
+        <div class="project-description">
+            <p>{{ .Content }}</p>
+        </div>
 
-    <ul class="external-links">
-        {{with .Params.link}}
+        <ul class="external-links">
+            <li><a href="https://github.com/kp4ws" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
+            {{with .Params.link}}
             <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
-        {{end}}
-        <li><a href="https://github.com/kp4ws" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
-    </ul>
+            {{end}}
+        </ul>
+
+    </div>
 
 </article>

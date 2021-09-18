@@ -18,9 +18,11 @@
 <!--Projects section-->
 <section class="project-section" id="projects">
     <h3 class="section-heading">Projects</h3>
-    {{ range where .Site.RegularPages "Type" "projects" }}
-    {{ .Render "summary"}}
-    {{ end }}
+    <article class="project-container">
+        {{ range where .Site.RegularPages "Type" "projects" }}
+        {{ .Render "summary"}}
+        {{ end }}
+    </article>
 </section>
 
 <!--Blog section-->
