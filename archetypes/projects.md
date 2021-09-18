@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" "_" | title }}"
 date: {{ .Date }}
-tags: ["C#", "Unity"]
+tags: ["Java", "Unity"]
 link: ""
 draft: false
 ---

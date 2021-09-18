@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/c#/</loc>
+    <loc>/tags/java/</loc>
     <lastmod>2021-09-18T11:23:28-06:00</lastmod>
   </url><url>
     <loc>/projects/project-6/</loc>
@@ -49,9 +49,6 @@
   </url><url>
     <loc>/skills/skill-1/</loc>
     <lastmod>2021-09-08T18:35:20-06:00</lastmod>
-  </url><url>
-    <loc>/tags/java/</loc>
-    <lastmod>2021-09-08T18:34:50-06:00</lastmod>
   </url><url>
     <loc>/projects/project-1/</loc>
     <lastmod>2021-09-08T18:34:50-06:00</lastmod>
