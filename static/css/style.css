@@ -29,11 +29,7 @@ RESETS
 
 html {
     box-sizing: border-box;
-    /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
-    font-size: 62.5%;
+    font-size: 55%;
     scroll-behavior: smooth;
 }
 
@@ -108,10 +104,6 @@ ul {
     font-weight: bold;
 }
 
-/* .nav-links li:first-child {
-    padding-top: 20px;
-} */
-
 .nav-links.active {
     display: flex;
 }
@@ -130,7 +122,7 @@ ul {
 }
 
 .nav a:hover, .hamburger:hover {
-    color: var(--highlight-color);
+    color: #FFAF7A;
     transition: all 0.2s ease 0s;
 }
 
@@ -139,7 +131,7 @@ SKILLS SECTION
 *******************/
 
 .skill-container {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -172,20 +164,7 @@ MEDIA QUERIES
 
 /* Portrait phones */
 
-@media (min-width: 576px) {
-    .skill-title {
-        flex-direction: row;
-    }
-    
-    .skill-container {
-        width: 75%;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    html {
-        font-size: 55%;
-    }
-}
+@media (min-width: 576px) {}
 
 /* Tablets */
 
@@ -205,8 +184,11 @@ MEDIA QUERIES
     .hamburger {
         display: none;
     }
-    html {
-        font-size: 58%;
+    .skill-title {
+        flex-direction: row;
+    }
+    .skill-container {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -214,7 +196,7 @@ MEDIA QUERIES
 
 @media (min-width: 992px) {
     html {
-        font-size: 58%;
+        font-size: 60%;
     }
 }
 
@@ -222,6 +204,6 @@ MEDIA QUERIES
 
 @media (min-width: 1200px) {
     html {
-        font-size: 60%;
+        font-size: 62.5%;
     }
 }
