@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pawson.dev</title>
+    <link>/</link>
+    <description>Recent content on pawson.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Sep 2021 18:33:49 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project_6</title>
+      <link>/projects/project-6/</link>
+      <pubDate>Sat, 18 Sep 2021 11:23:28 -0600</pubDate>
+      
+      <guid>/projects/project-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project_5</title>
+      <link>/projects/project-5/</link>
+      <pubDate>Sat, 18 Sep 2021 11:23:26 -0600</pubDate>
+      
+      <guid>/projects/project-5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project_4</title>
+      <link>/projects/project-4/</link>
+      <pubDate>Sat, 18 Sep 2021 11:23:23 -0600</pubDate>
+      
+      <guid>/projects/project-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project_3</title>
+      <link>/projects/project-3/</link>
+      <pubDate>Sat, 18 Sep 2021 11:23:21 -0600</pubDate>
+      
+      <guid>/projects/project-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project_2</title>
+      <link>/projects/project-2/</link>
+      <pubDate>Sat, 18 Sep 2021 11:23:17 -0600</pubDate>
+      
+      <guid>/projects/project-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/skills/skill-6/</link>
+      <pubDate>Thu, 16 Sep 2021 20:33:38 -0600</pubDate>
+      
+      <guid>/skills/skill-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C/C&#43;&#43;</title>
+      <link>/skills/skill-5/</link>
+      <pubDate>Thu, 16 Sep 2021 20:33:35 -0600</pubDate>
+      
+      <guid>/skills/skill-5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>/skills/skill-4/</link>
+      <pubDate>Thu, 16 Sep 2021 20:33:30 -0600</pubDate>
+      
+      <guid>/skills/skill-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>/skills/skill-3/</link>
+      <pubDate>Sun, 12 Sep 2021 17:13:27 -0600</pubDate>
+      
+      <guid>/skills/skill-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>/skills/skill-2/</link>
+      <pubDate>Sun, 12 Sep 2021 17:13:18 -0600</pubDate>
+      
+      <guid>/skills/skill-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>/skills/skill-1/</link>
+      <pubDate>Wed, 08 Sep 2021 18:35:20 -0600</pubDate>
+      
+      <guid>/skills/skill-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project 1</title>
+      <link>/projects/project-1/</link>
+      <pubDate>Wed, 08 Sep 2021 18:34:50 -0600</pubDate>
+      
+      <guid>/projects/project-1/</guid>
+      <description>Example project description</description>
+    </item>
+    
+  </channel>
+</rss>
