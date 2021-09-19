@@ -140,6 +140,25 @@ LINK STYLES
 }
 
 /******************
+CANVAS and BODY STYLES
+*******************/
+
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color);
+    z-index: -9999;
+}
+
+#main {
+    background-color: var(--secondary-color);
+    margin-bottom: 20rem;
+}
+
+/******************
 NAV BAR STYLES
 *******************/
 
@@ -201,8 +220,8 @@ ABOUT STYLES
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 1);
     color: var(--secondary-color);
+    padding: 10rem;
 }
 
 .bio {

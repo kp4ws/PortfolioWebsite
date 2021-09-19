@@ -1,12 +1,8 @@
 {{ define "main" }}
 
-<!--About section-->
-<section class="about-section" id="about">
-    {{ partial "about.html" . }}
-</section>
-
 <!--Skills section-->
 <section class="section-section" id="skills">
+    <div id="skill-link" style="position: relative; top: -190px; display: block; visibility: hidden;"></div>
     <h3 class="section-heading" style="padding: 0;">Skills</h3>
     <article class="main-container skill-container">
         {{ range where .Site.RegularPages "Type" "skills" }}
@@ -17,6 +13,7 @@
 
 <!--Projects section-->
 <section class="project-section" id="projects">
+    <div id="project-link" style="position: relative; top: -190px; display: block; visibility: hidden;"></div>
     <h3 class="section-heading">Projects</h3>
     <article class="main-container project-container">
         {{ range where .Site.RegularPages "Type" "projects" }}
@@ -27,6 +24,7 @@
 
 <!--Blog section-->
 <section class="blog-section" id="blogs">
+    <div id="blog-link" style="position: relative; top: -190px; display: block; visibility: hidden;"></div>
     <h3 class="section-heading">Blogs</h3>
     <article class="main-container blog-container">
         {{ range where .Site.RegularPages "Type" "blogs" }}
@@ -45,6 +43,7 @@
 
 <!--Contact section-->
 <section class="contact-section" id="contact">
+    <div id="contact-link" style="position: relative; top: -190px; display: block; visibility: hidden;"></div>
     <h3 class="section-heading" style="padding: 0;">Contact</h3>
     {{ partial "contact.html" . }}
 </section>

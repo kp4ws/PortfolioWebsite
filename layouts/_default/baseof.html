@@ -3,7 +3,12 @@
 {{ partial "head.html" . }}
 
 <body>
+    {{ partial "canvas.html" . }}
     {{ partial "header.html" . }}
+
+    <section class="about-section" id="about-section">
+        {{ partial "about.html" }}
+    </section>
 
     <main id="main">
         {{ block "main" . }}{{ end }}

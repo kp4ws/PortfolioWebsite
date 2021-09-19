@@ -7,4 +7,27 @@ function hamburgerMenu()
     navLinks.classList.toggle('active');
 }
 
+// ** FADE OUT FUNCTION **
+function fadeOut() 
+{
+    navLinks.style.opacity = 1;
+    (function fade() 
+    {
+        if ((navLinks.style.opacity -= 0.1) < 0) 
+        {
+            navLinks.classList.toggle('active');
+            navLinks.style.opacity = 1;
+        } else {
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
 hamburger.addEventListener('click', hamburgerMenu, false);
+navLinks.addEventListener('click', function() {
+    if (!navLinks.classList.contains("active"))
+    {
+        return;
+    }
+    fadeOut();
+})
