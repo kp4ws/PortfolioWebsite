@@ -7,7 +7,7 @@ VARIABLES
     --secondary-color: #F2F2F2;
     --fill-color: #c0c0c0;
     --foreground-color: #FFF;
-    --highlight-color: #FFAF7A;
+    --highlight-color: rgb(180, 75, 75);
     /* TODO set header and subheader sizes */
     /* --header-size: 45px; */
     /* --subheader-size: 25px; */
@@ -50,25 +50,6 @@ ul {
     padding-left: 0;
 }
 
-.external-links {
-    list-style: none;
-    font-size: 3rem;
-    padding-top: 2.5rem;
-}
-
-.external-links li {
-    display: inline-block;
-}
-
-.external-links a {
-    color: var(--primary-color);
-    transition: all 0.2s ease 0s;
-}
-
-.external-links a:hover {
-    color: var(--highlight-color);
-}
-
 .shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
 }
@@ -84,6 +65,12 @@ section {
 
 .section-heading {
     padding-bottom: 3rem;
+}
+
+.main-container {
+    width: 85%;
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 /******************
@@ -111,7 +98,49 @@ FONT
 }
 
 /******************
-NAV BAR
+LINK STYLES
+*******************/
+
+.external-links, .about-links {
+    list-style: none;
+    font-size: 3rem;
+}
+
+.external-links {
+    padding-top: 2.5rem;
+}
+
+.about-links {
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+.about-links li {
+    padding: 0 2rem 0 2rem;
+}
+
+.external-links li, .about-links li {
+    display: inline-block;
+}
+
+.external-links a {
+    color: var(--primary-color);
+}
+
+.about-links a {
+    color: var(--secondary-color);
+}
+
+.external-links a, .about-links a {
+    transition: all 0.2s ease 0s;
+}
+
+.external-links a:hover, .about-links a:hover {
+    color: var(--highlight-color);
+}
+
+/******************
+NAV BAR STYLES
 *******************/
 
 .nav {
@@ -158,17 +187,48 @@ NAV BAR
 }
 
 .nav a:hover, .hamburger:hover {
-    color: #FFAF7A;
+    color: var(--highlight-color);
     transition: all 0.2s ease 0s;
 }
 
 /******************
-SKILLS SECTION
+ABOUT STYLES
+*******************/
+
+.about-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 1);
+    color: var(--secondary-color);
+}
+
+.bio {
+    padding: 10rem;
+}
+
+.bio h1 {
+    font-size: 6rem;
+}
+
+.bio p {
+    padding-bottom: 2rem;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+/******************
+SKILLS STYLES
 *******************/
 
 .skill-container {
-    width: 85%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -199,8 +259,6 @@ PROJECT STYLES
 *******************/
 
 .project-container {
-    width: 85%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4rem;
@@ -241,8 +299,6 @@ BLOG STYLES
 *******************/
 
 .blog-container {
-    width: 85%;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4rem;
@@ -282,10 +338,7 @@ BLOG STYLES
 CONTACT STYLES
 *******************/
 
-.contact-container {
-    width: 85%;
-    margin: 0 auto;
-}
+.contact-container {}
 
 .contact-form {
     border-radius: 0.5rem;
@@ -318,6 +371,7 @@ CONTACT STYLES
 .submit-button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-weight: bold;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -325,7 +379,7 @@ CONTACT STYLES
 }
 
 .submit-button:hover {
-    background-color: var(--highlight-color);
+    background-color: firebrick;
 }
 
 /******************
@@ -372,20 +426,10 @@ MEDIA QUERIES
 
 @media (min-width: 992px) {
     .about-container {
-        width: 70%;
-    }
-    .skill-container {
-        width: 70%;
+        flex-direction: row;
     }
     .project-container {
         grid-template-columns: 1fr 1fr 1fr;
-        width: 70%;
-    }
-    .blog-container {
-        width: 70%;
-    }
-    .contact-container {
-        width: 70%;
     }
     html {
         font-size: 60%;

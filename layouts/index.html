@@ -8,7 +8,7 @@
 <!--Skills section-->
 <section class="section-section" id="skills">
     <h3 class="section-heading" style="padding: 0;">Skills</h3>
-    <article class="skill-container">
+    <article class="main-container skill-container">
         {{ range where .Site.RegularPages "Type" "skills" }}
         {{ .Render "summary"}}
         {{ end }}
@@ -18,7 +18,7 @@
 <!--Projects section-->
 <section class="project-section" id="projects">
     <h3 class="section-heading">Projects</h3>
-    <article class="project-container">
+    <article class="main-container project-container">
         {{ range where .Site.RegularPages "Type" "projects" }}
         {{ .Render "summary"}}
         {{ end }}
@@ -28,7 +28,7 @@
 <!--Blog section-->
 <section class="blog-section" id="blogs">
     <h3 class="section-heading">Blogs</h3>
-    <article class="blog-container">
+    <article class="main-container blog-container">
         {{ range where .Site.RegularPages "Type" "blogs" }}
         {{ .Render "summary"}}
         {{ end }}
