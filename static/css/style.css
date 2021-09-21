@@ -93,7 +93,7 @@ FONT
 }
 
 .icon-font {
-    font-size: 2rem;
+    font-size: 2.5rem;
     /*20px TODO: change this appropriately*/
 }
 
@@ -235,6 +235,7 @@ ABOUT STYLES
 .profile-image {
     width: 100%;
     height: auto;
+    max-width: 300px;
     object-fit: cover;
     border-radius: 3rem;
 }
