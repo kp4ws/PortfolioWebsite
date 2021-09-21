@@ -217,7 +217,6 @@ ABOUT STYLES
     justify-content: center;
     align-items: center;
     color: var(--secondary-color);
-    padding: 5rem 0 5rem 0;
 }
 
 .bio {
@@ -235,7 +234,7 @@ ABOUT STYLES
 .profile-image {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 180px;
     object-fit: cover;
     border-radius: 3rem;
 }

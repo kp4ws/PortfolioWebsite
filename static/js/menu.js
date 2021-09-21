@@ -15,7 +15,8 @@ function fadeOut()
     {
         if ((navLinks.style.opacity -= 0.1) < 0) 
         {
-            navLinks.classList.toggle('active');
+            // TODO reset hamburger icon
+            navLinks.classList.toggle('active'); 
             navLinks.style.opacity = 1;
         } else {
             requestAnimationFrame(fade);
