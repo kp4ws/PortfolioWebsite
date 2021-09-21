@@ -111,12 +111,9 @@ LINK STYLES
 }
 
 .about-links {
+    margin: 0.5rem auto;
     text-align: center;
-    padding: 1rem 0 2rem 0;
-}
-
-.about-links li {
-    padding: 0 2rem 0 2rem;
+    padding: 0 25px 0 25px;
 }
 
 .external-links li, .about-links li {
@@ -155,7 +152,6 @@ CANVAS and BODY STYLES
 
 #main {
     background-color: var(--secondary-color);
-    margin-bottom: 20rem;
 }
 
 /******************
@@ -221,15 +217,15 @@ ABOUT STYLES
     justify-content: center;
     align-items: center;
     color: var(--secondary-color);
-    padding: 10rem;
+    padding: 5rem 0 5rem 0;
 }
 
 .bio {
-    padding: 10rem;
+    max-width: 650px;
 }
 
 .bio h1 {
-    font-size: 6rem;
+    font-size: 3em;
 }
 
 .bio p {
@@ -240,7 +236,7 @@ ABOUT STYLES
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10%;
+    border-radius: 3rem;
 }
 
 /******************

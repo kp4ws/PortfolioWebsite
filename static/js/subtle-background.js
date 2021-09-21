@@ -22,7 +22,7 @@ function drawParticles() {
 
   for (let i = 0; i < particles.length; i++) {
     let p = particles[i];
-    
+
     //Create circle (particle)
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -50,9 +50,9 @@ function connectParticles() {
         strokeOpacity = 1 - distance / CONNECT_DISTANCE;
         ctx.beginPath();
 
-         //Gives the connected lines a specific opacity baseed on distance to each other
+        //Gives the connected lines a specific opacity baseed on distance to each other
         ctx.strokeStyle = 'rgba(192,192,192,' + strokeOpacity + ')';
-        
+
         ctx.moveTo(p1.x, p1.y);
         ctx.lineTo(p2.x, p2.y);
         ctx.lineWidth = LINE_WIDTH;
@@ -66,7 +66,7 @@ function moveParticles() {
 
   for (let i = 0; i < particles.length; i++) {
     let p = particles[i];
-    
+
     //Collision detection
     if (p.x + p.radius > canvas.width || p.x - p.radius < 0) {
       p.dx *= -1;
@@ -83,68 +83,7 @@ function moveParticles() {
 
 }
 
-function resizeParticles()
-{
-  if(canvas.width < 1000)
-  {
-    windowSetting = 0;
-  }
-  else if (canvas.width < 1500)
-  {
-    windowSetting = 1;
-  }
-  else if (canvas.width < 2000)
-  {
-    windowSetting = 2;
-  }
-}
-
 function init() {
-
-  resizeParticles();
-
-  switch(windowSetting)
-  {
-    case 0:
-      if (canvas.width < 1000) {
-        PARTICLE_AMOUNT = 100;
-        CONNECT_DISTANCE = 100;
-        windowSetting = 1;
-        createParticles();
-      }
-      break;
-      case 1:
-      if (canvas.width > 1500 && !isSmall) {
-        PARTICLE_AMOUNT = 200;
-        CONNECT_DISTANCE = 100;
-        windowSetting = 2;
-      }
-      createParticles();
-        break;
-        case 2:
-          createParticles();
-          break;
-
-    default:
-      if (canvas.width < 1000)
-      {
-        PARTICLE_AMOUNT = 100;
-        CONNECT_DISTANCE = 100;
-        windowSetting = 1;
-      }
-      else {
-        PARTICLE_AMOUNT = 200;
-        CONNECT_DISTANCE = 100;
-        windowSetting = 2;
-      }
-      createParticles();
-    break;
-  }
-  
-}
-
-function createParticles()
-{
   //Reset particles array
   particles = [];
 
@@ -170,8 +109,8 @@ function update() {
 init();
 update();
 
-window.addEventListener('resize', function(){
-  canvas.width = window.innerWidth;
-  canvas.height = document.body.scrollHeight;
-  init();
-});
+// window.addEventListener('resize', function () {
+//   canvas.width = window.innerWidth;
+//   canvas.height = document.body.scrollHeight;
+//   init();
+// });
