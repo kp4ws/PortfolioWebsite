@@ -1,7 +1,7 @@
 ---
-title: "Project_3"
+title: "Encrypted Editor"
 date: 2021-09-18T11:23:21-06:00
-technologies: ["Java", "Unity"]
+technologies: ["Java"]
 link: ""
 draft: false
 weight: 3

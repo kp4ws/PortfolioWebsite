@@ -15,7 +15,7 @@ function fadeOut()
     {
         if ((navLinks.style.opacity -= 0.1) < 0) 
         {
-            // TODO reset hamburger icon
+            hamburger.innerHTML = "<i class='icon-font fas fa-bars'></i>";
             navLinks.classList.toggle('active'); 
             navLinks.style.opacity = 1;
         } else {
