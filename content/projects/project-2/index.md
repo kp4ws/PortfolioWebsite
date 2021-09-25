@@ -6,3 +6,4 @@ link: ""
 draft: false
 weight: 2
 ---
+Talent Agency website that removes bias from the hiring process

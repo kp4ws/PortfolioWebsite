@@ -6,3 +6,4 @@ link: ""
 draft: false
 weight: 5
 ---
+Strategy game where you travel through portals to escape the maze

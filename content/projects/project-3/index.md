@@ -6,3 +6,4 @@ link: ""
 draft: false
 weight: 3
 ---
+A simple text editor that allows the user to encrypt their messages

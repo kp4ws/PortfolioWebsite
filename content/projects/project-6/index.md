@@ -6,3 +6,4 @@ link: ""
 draft: false
 weight: 6
 ---
+CMD utility used to export excel files into SQL commands

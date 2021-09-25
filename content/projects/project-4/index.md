@@ -6,3 +6,4 @@ link: ""
 draft: false
 weight: 4
 ---
+Breakout-like game that procedurally generates each wave of blocks
