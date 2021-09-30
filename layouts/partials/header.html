@@ -3,7 +3,7 @@
     <nav class="nav" id="navbar">
 
         <div class="logo header-font">
-            <a href="#top">
+            <a href="{{ .Site.BaseURL | absURL }}">
                 <h2>{{ .Title }}</h2>
             </a>
         </div>
@@ -13,11 +13,9 @@
         </button>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#top">About</a></li>
-            <li><a href="#skill-link">Skills</a></li>
-            <li><a href="#project-link">Projects</a></li>
-            <li><a href="#blog-link">Blogs</a></li>
-            <li><a href="#contact-link">Contact</a></li>
+            {{range .Site.Menus.nav }}
+                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end }}
         </ul>
     </nav>
 

@@ -6,12 +6,9 @@
     {{ partial "canvas.html" . }}
     {{ partial "header.html" . }}
 
-    <section class="about-section" id="about-section">
-        {{ partial "about.html" }}
-    </section>
-
-    <main id="main">
-        {{ block "main" . }}{{ end }}
+    <main>
+        <div id="hero">{{ block "hero" . }}{{ end }}</div>
+        <div id="main-section">{{ block "main-section" . }}{{ end }}</div>
     </main>
 
     {{ partial "footer.html" . }}

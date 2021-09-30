@@ -10,7 +10,7 @@ const LINE_WIDTH = 1;
 const PARTICLE_COLOR = 'rgb(192,192,192)';
 
 let PARTICLE_AMOUNT = 100;
-let CONNECT_DISTANCE = 100;
+let CONNECT_DISTANCE = 250;
 
 let particles;
 let isSmall;
@@ -18,7 +18,7 @@ let windowSetting;
 
 function drawParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.globalCompositeOperation = "lighter";
+  //ctx.globalCompositeOperation = "lighter";
 
   for (let i = 0; i < particles.length; i++) {
     let p = particles[i];

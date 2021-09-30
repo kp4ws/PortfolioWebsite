@@ -1,6 +1,33 @@
-baseURL = ""
+baseURL = "/" #TODO add updated URL
 languageCode = "en-us"
-title = "pawson.dev"
+title = "kentpawson.dev"
+
+[menu]
+    [[menu.nav]]
+    name = "About"
+    URL = "#about"
+    weight = 1
+
+    [[menu.nav]]
+    name = "Skills"
+    URL = "#skill"
+    weight = 2
+
+    [[menu.nav]]
+    name = "Projects"
+    URL = "#project"
+    weight = 3
+
+    [[menu.nav]]
+    name = "Blogs"
+    URL = "#blog"
+    weight = 4
+
+    [[menu.nav]]
+    name = "Contact"
+    URL = "#contact"
+    weight = 5
+
 [taxonomies]
     tag = "tags"
     category = "categories"
