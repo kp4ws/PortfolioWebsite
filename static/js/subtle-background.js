@@ -4,17 +4,21 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = document.body.scrollHeight;
 
-const MAX_SPEED = 0.2;
-const MAX_RADIUS = 5;
-const LINE_WIDTH = 1;
 const PARTICLE_COLOR = 'rgb(192,192,192)';
+const MQLS = [
+  window.matchMedia('(min-width: 576px)'),
+  window.matchMedia('(min-width: 768px)'),
+  window.matchMedia('(min-width: 992px)'),
+  window.matchMedia('(min-width: 1200px)'),
+  window.matchMedia('(min-width: 1600px)')
+]
 
-let PARTICLE_AMOUNT = 100;
-let CONNECT_DISTANCE = 250;
-
+let maxSpeed;
+let maxRadius;
+let lineWidth;
+let particleAmount;
+let connectDistance;
 let particles;
-let isSmall;
-let windowSetting;
 
 function drawParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -46,8 +50,8 @@ function connectParticles() {
       let distance = Math.sqrt(sideA * sideA + sideB * sideB);
 
       //Create line if within distance
-      if (distance <= CONNECT_DISTANCE) {
-        strokeOpacity = 1 - distance / CONNECT_DISTANCE;
+      if (distance <= connectDistance) {
+        strokeOpacity = 1 - distance / connectDistance;
         ctx.beginPath();
 
         //Gives the connected lines a specific opacity baseed on distance to each other
@@ -55,7 +59,7 @@ function connectParticles() {
 
         ctx.moveTo(p1.x, p1.y);
         ctx.lineTo(p2.x, p2.y);
-        ctx.lineWidth = LINE_WIDTH;
+        ctx.lineWidth = lineWidth;
         ctx.stroke();
       }
     }
@@ -83,34 +87,75 @@ function moveParticles() {
 
 }
 
-function init() {
-  //Reset particles array
+function update() {
+  drawParticles();
+  moveParticles();
+  
+  requestAnimationFrame(update);
+}
+
+function resetParticles(speed, radius, width, amount, distance) {
   particles = [];
+  maxSpeed = speed;
+  maxRadius = radius;
+  lineWidth = width;
+  particleAmount = amount;
+  connectDistance = distance;
 
   //Populate particles array
-  for (let i = 0; i < PARTICLE_AMOUNT; i++) {
+  for (let i = 0; i < particleAmount; i++) {
     particles.push({
       x: Math.random() * canvas.width,  //Between 0 and canvas.width 
       y: Math.random() * canvas.height, //Between 0 and canvas.height 
-      dx: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
-      dy: (Math.random() * MAX_SPEED) - MAX_SPEED / 2, //Between MAX_SPEED and -MAX_SPEED
-      radius: Math.random() * MAX_RADIUS + 1 //Between 1 and MAX_RADIUS 
+      dx: (Math.random() * maxSpeed) - maxSpeed / 2, //Between maxSpeed and -maxSpeed
+      dy: (Math.random() * maxSpeed) - maxSpeed / 2, //Between maxSpeed and -maxSpeed
+      radius: Math.random() * maxRadius + 1 //Between 1 and maxRadius 
     });
   }
 }
 
-function update() {
-  drawParticles();
-  moveParticles();
-
-  requestAnimationFrame(update);
+function resizeParticles() {
+  if (MQLS[0].matches && !MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
+    //console.log("portrait");
+    //Portrait phones
+    resetParticles(0.2, 5, 1, 95, 120);
+  }
+  else if (MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
+    //console.log("tablet");
+    //Tablets
+    resetParticles(0.2, 5, 1, 100, 150);
+  }
+  else if (MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
+    //console.log("laptop");
+    //Laptops
+    resetParticles(0.2, 5, 1, 150, 200);
+  }
+  else if (MQLS[3].matches && !MQLS[4].matches) {
+    // console.log("extra large");
+    //Large devices
+    resetParticles(0.2, 5, 1, 200, 200);
+  }
+  else if (MQLS[4].matches)
+  {
+    // console.log("extra XL large");
+    //Extra large devices
+    resetParticles(0.2, 5, 1, 400, 200);
+  }
+  else if (!MQLS[0].matches && !MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
+    // console.log("mobile");
+    //mobile phone
+    resetParticles(0.2, 5, 1, 90, 80);
+  }
 }
 
-init();
-update();
+for (let i = 0; i < MQLS.length; i++) {
+  MQLS[i].addEventListener("change", resizeParticles);
+}
 
-// window.addEventListener('resize', function () {
-//   canvas.width = window.innerWidth;
-//   canvas.height = document.body.scrollHeight;
-//   init();
-// });
+window.addEventListener('resize', function () {
+  canvas.width = window.innerWidth;
+  canvas.height = document.body.scrollHeight;
+});
+
+resizeParticles();
+update();
