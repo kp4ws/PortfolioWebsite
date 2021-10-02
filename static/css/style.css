@@ -225,7 +225,7 @@ ABOUT STYLES
     justify-content: center;
     align-items: center;
     color: var(--secondary-color);
-    padding-bottom: 10rem;
+    padding: 6rem 0 10rem 0;
 }
 
 .bio {
@@ -417,6 +417,17 @@ CONTACT STYLES
 }
 
 /******************
+FOOTER STYLES
+*******************/
+
+.footer-container {
+    padding: 10rem;
+    color: var(--secondary-color);
+    text-align: center;
+    z-index: -99999999999999;
+}
+
+/******************
 MEDIA QUERIES
 *******************/
 
@@ -465,15 +476,12 @@ MEDIA QUERIES
     .about-container {
         flex-direction: row;
     }
-    
     .project-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
     .section-link {
         top: -180px;
     }
-
     html {
         font-size: 60%;
     }
