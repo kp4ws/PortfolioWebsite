@@ -8,9 +8,6 @@ VARIABLES
     --fill-color: #c0c0c0;
     --foreground-color: #FFF;
     --highlight-color: #FFAF7A;
-    /* TODO set header and subheader sizes */
-    /* --header-size: 45px; */
-    /* --subheader-size: 25px; */
 }
 
 /******
@@ -38,8 +35,8 @@ GLOBAL STYLES
 *******************/
 
 body {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: #F2F2F2;
+    color: #0D0D0D;
     font-family: 'Montserrat', monospace;
     font-size: 1.8rem;
     /*18px*/
@@ -121,11 +118,11 @@ LINK STYLES
 }
 
 .external-links a {
-    color: var(--primary-color);
+    color: #0D0D0D;
 }
 
 .about-links a {
-    color: var(--secondary-color);
+    color: #F2F2F2;
 }
 
 .external-links a, .about-links a {
@@ -133,7 +130,7 @@ LINK STYLES
 }
 
 .external-links a:hover, .about-links a:hover {
-    color: var(--highlight-color);
+    color: #FFAF7A;
 }
 
 .section-link {
@@ -153,12 +150,12 @@ CANVAS and BODY STYLES
     left: 0;
     width: 100%;
     height: auto;
-    background-color: var(--primary-color);
+    background-color: #0D0D0D;
     z-index: -9999;
 }
 
 #main-section {
-    background-color: var(--secondary-color);
+    background-color: #F2F2F2;
     padding: 5rem 0 15rem 0;
 }
 
@@ -176,7 +173,7 @@ NAV BAR STYLES
     left: 0;
     width: 100%;
     padding: 30px 30px;
-    background-color: var(--primary-color);
+    background-color: #0D0D0D;
     z-index: 9999;
 }
 
@@ -198,7 +195,7 @@ NAV BAR STYLES
 
 .hamburger {
     background-color: transparent;
-    color: var(--secondary-color);
+    color: #F2F2F2;
     border: 0;
     display: block;
     cursor: pointer;
@@ -206,12 +203,12 @@ NAV BAR STYLES
 
 .nav a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #F2F2F2;
     transition: all 0.1s linear;
 }
 
 .nav a:hover, .hamburger:hover {
-    color: var(--highlight-color);
+    color: #FFAF7A;
 }
 
 /******************
@@ -224,7 +221,7 @@ ABOUT STYLES
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    color: #F2F2F2;
     padding: 6rem 0 10rem 0;
 }
 
@@ -268,12 +265,12 @@ SKILLS STYLES
 }
 
 .skill-bg {
-    background-color: var(--fill-color);
+    background-color: #c0c0c0;
     border-radius: 0.5rem;
 }
 
 .skill-fg {
-    background-color: var(--primary-color);
+    background-color: #0D0D0D;
     padding: 1rem;
     border-radius: 0.5rem;
 }
@@ -289,7 +286,7 @@ PROJECT STYLES
 }
 
 .project-column {
-    background-color: var(--foreground-color);
+    background-color: #FFF;
     text-align: left;
 }
 
@@ -332,7 +329,7 @@ BLOG STYLES
 }
 
 .blog-column {
-    background-color: var(--foreground-color);
+    background-color: #FFF;
     text-align: left;
 }
 
@@ -398,7 +395,7 @@ CONTACT STYLES
 
 .submit-button {
     background-color: rgb(41, 41, 41);
-    color: var(--secondary-color);
+    color: #F2F2F2;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
@@ -408,8 +405,8 @@ CONTACT STYLES
 }
 
 .submit-button:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: #0D0D0D;
+    color: #F2F2F2;
 }
 
 .submit-button:active {
@@ -422,7 +419,7 @@ FOOTER STYLES
 
 .footer-container {
     padding: 10rem;
-    color: var(--secondary-color);
+    color: #F2F2F2;
     text-align: center;
 }
 
