@@ -4,7 +4,6 @@
     <title>{{ .Title }}</title>
     <link rel="icon" type="image/png" href=""> <!--TODO add better favicon (16x16 or 32x32 pixels)-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
-        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/style.css">
 </head>
