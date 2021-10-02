@@ -2,8 +2,9 @@
 title: "Excel Exporter"
 date: 2021-09-18T11:23:28-06:00
 technologies: ["Python"]
+github: "https://github.com/kp4ws/ExcelExport"
 link: ""
 draft: false
-weight: 6
+weight: 4
 ---
 CMD utility used to export excel files into SQL commands

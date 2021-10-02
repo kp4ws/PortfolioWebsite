@@ -2,7 +2,7 @@
 title: "Procedural Terrain"
 date: 2021-03-29
 time: 9
-link: ""
+link: "https://kentpawson123.medium.com/procedural-generation-implementation-d9472d053cef"
 draft: false
 weight: 2
 ---

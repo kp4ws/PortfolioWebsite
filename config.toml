@@ -1,6 +1,6 @@
 baseURL = "/" #TODO add updated URL
 languageCode = "en-us"
-title = "kentpawson.dev"
+title = "pawson.dev"
 
 [menu]
     [[menu.nav]]

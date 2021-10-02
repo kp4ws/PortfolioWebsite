@@ -424,7 +424,6 @@ FOOTER STYLES
     padding: 10rem;
     color: var(--secondary-color);
     text-align: center;
-    z-index: -99999999999999;
 }
 
 /******************
