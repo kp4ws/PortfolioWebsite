@@ -35,11 +35,11 @@ GLOBAL STYLES
 *******************/
 
 body {
-    background-color: #F2F2F2;
+    background-color: #0D0D0D;
     color: #0D0D0D;
     font-family: 'Montserrat', monospace;
     font-size: 1.8rem;
-    /*18px*/
+    min-width: 190px;
 }
 
 ul {
@@ -114,6 +114,7 @@ LINK STYLES
 
 .external-links li, .about-links li {
     display: inline-block;
+    position: relative;
 }
 
 .external-links a {
@@ -128,8 +129,8 @@ LINK STYLES
     transition: all 0.1s linear;
 }
 
-.external-links a:hover, .about-links a:hover {
-    color: #FFAF7A;
+.external-links a:hover {
+    color: #076fcf;
 }
 
 .section-link {
@@ -154,7 +155,7 @@ CANVAS and BODY STYLES
 #main-section {
     background-color: #F2F2F2;
     padding: 5rem 0 15rem 0;
-    z-index: 10;
+    z-index: 1;
 }
 
 /******************
@@ -205,8 +206,8 @@ NAV BAR STYLES
     transition: all 0.1s linear;
 }
 
-.nav a:hover, .hamburger:hover {
-    color: #FFAF7A;
+.nav a:hover, .about-links a:hover, .hamburger:hover {
+    color: #408bd1;
 }
 
 /******************
@@ -220,8 +221,7 @@ ABOUT STYLES
     justify-content: center;
     color: #F2F2F2;
     background-color: rgba(13, 13, 13, 0.1);
-     padding: 3rem 0 10rem 0;
-    z-index: -20;
+    padding: 3rem 0 10rem 0;
     text-align: center;
 }
 
@@ -288,9 +288,9 @@ PROJECT STYLES
 .project-column {
     background-color: #FFF;
     text-align: left;
-}
-
-.project-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 2.5rem 2.5rem;
 }
 
@@ -325,15 +325,15 @@ BLOG STYLES
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 4rem;
-    max-width: 100rem;
+    max-width: 90rem;
 }
 
 .blog-column {
     background-color: #FFF;
     text-align: left;
-}
-
-.blog-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 2.5rem 2.5rem;
 }
 
@@ -418,11 +418,10 @@ FOOTER STYLES
 *******************/
 
 .footer-container {
-    padding: 10rem;
+    padding: 10rem 0 10rem 0;
     color: #F2F2F2;
     background-color: rgba(13, 13, 13, 0.1);
     text-align: center;
-    z-index: -20;
 }
 
 /******************

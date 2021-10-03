@@ -7,4 +7,4 @@ link: ""
 draft: false
 weight: 6
 ---
-My custom built portfolio websit
+My custom built portfolio website

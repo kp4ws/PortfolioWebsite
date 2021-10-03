@@ -16,14 +16,15 @@
         <div class="project-description">
             <p>{{ .Content }}</p>
         </div>
-
-        <ul class="external-links">
-            <li><a href="https://github.com/kp4ws" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
-            {{with .Params.link}}
-            <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
-            {{end}}
-        </ul>
-
     </div>
+
+    <ul class="external-links">
+        {{with .Params.github}}
+            <li><a href="{{ . }}" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
+        {{end}}
+        {{with .Params.link}}
+            <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
+        {{end}}
+    </ul>
 
 </article>
