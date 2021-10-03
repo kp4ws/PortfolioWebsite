@@ -130,7 +130,7 @@ LINK STYLES
 }
 
 .external-links a:hover {
-    color: #076fcf;
+    color: #5C64F2;
 }
 
 .section-link {
@@ -207,7 +207,7 @@ NAV BAR STYLES
 }
 
 .nav a:hover, .about-links a:hover, .hamburger:hover {
-    color: #408bd1;
+    color: #8D92F2;
 }
 
 /******************
