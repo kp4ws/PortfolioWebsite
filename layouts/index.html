@@ -1,10 +1,10 @@
 {{ define "hero"}}
-    <canvas id="bg-canvas"></canvas>
     <!-- About Section -->
     <section class="about-section hero-section">
-        <div class="section-link" id="about"></div>
+        <div class="section-link" id="about" style="z-index: -20;"></div>
         {{ partial "about.html" }}
     </section>
+    <canvas id="bg-canvas"></canvas>
 {{ end }}
 
 {{ define "main-section" }}

@@ -109,7 +109,6 @@ LINK STYLES
 
 .about-links {
     margin: 0.5rem auto;
-    text-align: center;
     padding: 0 25px 0 25px;
 }
 
@@ -145,18 +144,19 @@ CANVAS and BODY STYLES
 *******************/
 
 #bg-canvas {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
     background-color: #0D0D0D;
-    z-index: -9999;
+    z-index: -1;
 }
 
 #main-section {
     background-color: #F2F2F2;
     padding: 5rem 0 15rem 0;
+    z-index: 10;
 }
 
 /******************
@@ -174,7 +174,7 @@ NAV BAR STYLES
     width: 100%;
     padding: 30px 30px;
     background-color: #0D0D0D;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .nav-links {
@@ -220,9 +220,11 @@ ABOUT STYLES
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     color: #F2F2F2;
-    padding: 6rem 0 10rem 0;
+    background-color: rgba(13, 13, 13, 0.1);
+     padding: 3rem 0 10rem 0;
+    z-index: -20;
+    text-align: center;
 }
 
 .bio {
@@ -230,7 +232,7 @@ ABOUT STYLES
 }
 
 .bio h1 {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .bio p {
@@ -420,7 +422,9 @@ FOOTER STYLES
 .footer-container {
     padding: 10rem;
     color: #F2F2F2;
+    background-color: rgba(13, 13, 13, 0.1);
     text-align: center;
+    z-index: -20;
 }
 
 /******************
