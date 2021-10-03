@@ -147,8 +147,6 @@ CANVAS and BODY STYLES
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
     background-color: #0D0D0D;
     z-index: -1;
 }
