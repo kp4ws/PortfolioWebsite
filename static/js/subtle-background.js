@@ -1,6 +1,6 @@
 "use strict";
 
-const canvas = document.getElementById("bg-canvas").transferControlToOffscreen();
+const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = document.body.scrollHeight;
