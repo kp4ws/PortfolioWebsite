@@ -27,8 +27,3 @@ title = "pawson.dev"
     name = "Contact"
     URL = "#contact"
     weight = 5
-
-[taxonomies]
-    tag = "tags"
-    category = "categories"
-    technology = "technologies"
