@@ -12,9 +12,9 @@
             <i class="fas fa-bars icon-font"></i>
         </button>
 
-        <ul class="nav-links" id="nav-links">
+        <ul class="nav-links" id="nav-links" onclick="toggleNav(this);">
             {{range .Site.Menus.nav }}
-                <li><a href="{{ .URL | relURL }}" onclick="toggleNav();">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </nav>
