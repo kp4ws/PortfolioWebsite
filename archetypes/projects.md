@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" "_" | title }}"
 date: {{ .Date }}
-categories: ["Java", "Unity"]
+tags: ["Java", "Unity"]
 github: ""
 link: ""
 draft: false

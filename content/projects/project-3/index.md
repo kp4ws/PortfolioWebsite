@@ -1,7 +1,7 @@
 ---
 title: "Encrypted Editor"
 date: 2021-09-18T11:23:21-06:00
-categories: ["Java"]
+tags: ["Java"]
 github: "https://github.com/kp4ws/EncryptedEditor"
 link: ""
 draft: false
