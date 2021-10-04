@@ -9,12 +9,10 @@ function toggleMenu()
     navLinks.classList.toggle('active');
 }
 
-
-hamburger.addEventListener('click', toggleMenu, false);
-navLinks.addEventListener('click', function() {
+function toggleNav() {
     if (!navLinks.classList.contains("active"))
     {
         return;
     }
     toggleMenu();
-})
+}

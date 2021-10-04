@@ -8,13 +8,13 @@
             </a>
         </div>
 
-        <button class="hamburger icon-font" id="hamburger">
+        <button class="hamburger icon-font" id="hamburger" onclick="toggleMenu();">
             <i class="fas fa-bars icon-font"></i>
         </button>
 
         <ul class="nav-links" id="nav-links">
             {{range .Site.Menus.nav }}
-                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL | relURL }}" onclick="toggleNav();">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </nav>
