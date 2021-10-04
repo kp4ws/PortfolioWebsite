@@ -113,22 +113,29 @@ class ParticleSystem {
 }
 
 function resizeParticles() {
-  if (MQLS[0].matches && !MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
-    particleSystem = new ParticleSystem(0.2, 5, 1, 95, 120);
-  }
-  else if (MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
-    particleSystem = new ParticleSystem(0.2, 5, 1, 100, 150);
-  }
-  else if (MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
-    particleSystem = new ParticleSystem(0.2, 5, 1, 150, 200);
-  }
-  else if (MQLS[3].matches && !MQLS[4].matches) {
-    particleSystem = new ParticleSystem(0.2, 5, 1, 200, 200);
-  }
-  else if (MQLS[4].matches) {
+  if(MQLS[4].matches) {
+    //XL screen
     particleSystem = new ParticleSystem(0.2, 5, 1, 400, 200);
   }
-  else if (!MQLS[0].matches && !MQLS[1].matches && !MQLS[2].matches && !MQLS[3].matches && !MQLS[4].matches) {
+  else if(MQLS[3].matches) {
+    //large screen
+    particleSystem = new ParticleSystem(0.2, 5, 1, 200, 200);
+  }
+  else if (MQLS[2].matches) {
+    //laptop
+    particleSystem = new ParticleSystem(0.2, 5, 1, 150, 200);
+  }
+  else if (MQLS[1].matches) {
+
+    //tablet
+    particleSystem = new ParticleSystem(0.2, 5, 1, 100, 150);
+  }
+  else if (MQLS[0].matches) {
+    //portrait phone
+    particleSystem = new ParticleSystem(0.2, 5, 1, 95, 120);
+  }
+  else {
+    //mobile
     particleSystem = new ParticleSystem(0.2, 5, 1, 90, 80);
   }
 }
