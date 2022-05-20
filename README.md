@@ -8,3 +8,9 @@ Since I first started working on this project, I've gained a lot of experience i
 
 ## Technologies
 HTML, CSS, JavaScript, Hugo, Netlify
+
+## Ideas for future iterations
+- Add subsections for the skills, e.g. React.js under JavaScript
+- Organize skills by front-end and back-end technologies
+- Add photos for the projects
+- Add popups for each of the cards (Blogs and Projects) where you can expand to see more info
