@@ -1,6 +1,6 @@
 "use strict";
 
-
+// TODO: If clicked off menu, make menu go away
 
 function toggleMenu(nav)
 {

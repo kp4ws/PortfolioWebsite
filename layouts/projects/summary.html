@@ -18,7 +18,7 @@
         </div>
 
         <div class="project-description">
-            <p>{{ .Content }}</p>
+            <p>{{ .Content | safeHTML | truncate .Site.Params.summaryLength}}</p>
         </div>
     </div>
 
@@ -27,7 +27,8 @@
             <li><a href="{{ . }}" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
         {{end}}
         {{with .Params.link}}
-            <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
+        <!-- TODO: Consider adding this back in within a future iteration -->
+            <!-- <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li> -->
         {{end}}
     </ul>
 

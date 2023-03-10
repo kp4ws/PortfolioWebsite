@@ -1,6 +1,9 @@
-baseURL = "/" #TODO add updated URL
+baseURL = "https://pawson.dev/"
 languageCode = "en-us"
-title = "pawson.dev"
+title = "Kent Pawson Portfolio Website"
+
+[params]
+summaryLength = 55
 
 [menu]
     [[menu.nav]]
