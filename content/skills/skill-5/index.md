@@ -1,8 +1,8 @@
 ---
 title: "C/C++"
 date: 2021-09-16T20:33:35-06:00
-subtitle: "Novice"
-level: 40
+subtitle: "Intermediate"
+level: 50
 draft: false
-weight: 6
+weight: 5
 ---
