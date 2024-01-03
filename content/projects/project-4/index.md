@@ -1,10 +1,10 @@
 ---
-title: "Block Destroyer Mobile"
+title: "RPG Project"
 date: 2021-09-18T11:23:23-06:00
 tags: ["Unity", "C-Sharp"]
-github: "https://github.com/kp4ws/Block-Destroyer-Mobile"
-link: "https://play.google.com/store/apps/details?id=com.Kp4wsGames.BlockDestroyer"
+github: "https://github.com/kp4ws/RPGProject"
+link:
 draft: false
-weight: 2
+weight: 4
 ---
-Mobile breakout-like game that procedurally generates each wave of blocks
+RPG project that I've been building in Unity by following Gamedev.tv's RPG bundle tutorial course

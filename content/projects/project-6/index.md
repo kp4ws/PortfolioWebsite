@@ -1,10 +1,10 @@
 ---
-title: "Excel Exporter"
+title: "Book Management System"
 date: 2021-09-18T11:23:28-06:00
-tags: ["Python"]
-github: "https://github.com/kp4ws/ExcelExport"
+tags: ["C++"]
+github: "https://github.com/kp4ws/book-management-system"
 link: ""
 draft: false
-weight: 4
+weight: 6
 ---
-CMD utility used to export excel files into SQL commands
+Command-line application to manage an inventory of books

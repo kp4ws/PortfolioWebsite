@@ -5,6 +5,6 @@ tags: ["HTML", "CSS", "JavaScript", "Java"]
 github: "https://github.com/ArmaanSinghKlair/level-ground-recruitment"
 link: "https://lgr-app.herokuapp.com/"
 draft: false
-weight: 1
+weight: 2
 ---
 Talent Agency website that removes bias from the hiring process
