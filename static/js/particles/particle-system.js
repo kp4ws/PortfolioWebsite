@@ -102,8 +102,8 @@ function updateParticles() {
 
 initializeParticles();
 
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initializeParticles();
-});
+// window.addEventListener('resize', () => {
+//   canvas.width = window.innerWidth;
+//   canvas.height = window.innerHeight;
+//   initializeParticles();
+// });
