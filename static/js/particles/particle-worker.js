@@ -17,7 +17,7 @@ onmessage = (event) => {
     }
     else if (p.x - p.radius < 0) {
       p.x = p.radius;
-      p.vx *= 1;
+      p.vx *= -1;
     }
 
     if (p.y + p.radius > canvasHeight) {
