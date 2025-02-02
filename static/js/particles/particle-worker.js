@@ -11,20 +11,22 @@ onmessage = (event) => {
     p.y += p.vy;
 
     //Boundary bouncing
-    if (p.x > canvasWidth + p.radius) {
-      p.x = -p.radius; //Wrap around right
+    if (p.x + p.radius > canvasWidth) {
+      p.x = canvasWidth - p.radius;
+      p.vx *= -1;
+    }
+    else if (p.x - p.radius < 0) {
+      p.x = p.radius;
+      p.vx *= 1;
     }
 
-    if (p.x < -p.radius) {
-      p.x = canvasWidth + p.radius; //Wrap around left
+    if (p.y + p.radius > canvasHeight) {
+      p.y = canvasHeight - p.radius;
+      p.vy *= -1;
     }
-
-    if (p.y > canvasHeight + p.radius) {
-      p.y = -p.radius; //Wrap around bottom
-    }
-
-    if (p.y < -p.radius) {
-      p.y = canvasHeight + p.radius; //Wrap around top
+    else if (p.y - p.radius < 0) {
+      p.y = p.radius;
+      p.vy *= -1;
     }
   }
 

@@ -226,7 +226,7 @@ ABOUT STYLES
   flex-direction: column;
   justify-content: center;
   color: #f2f2f2;
-  background-color: rgba(13, 13, 13, 0.1);
+  background-color: rgba(13, 13, 13, 0.3);
   padding: 3rem 0 10rem 0;
   text-align: center;
 }
@@ -237,6 +237,7 @@ ABOUT STYLES
 
 .bio p {
   padding-bottom: 2rem;
+  font-weight: bold;
 }
 
 .bio-header h1 {
