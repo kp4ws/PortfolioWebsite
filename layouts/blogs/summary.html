@@ -18,10 +18,10 @@
 
     <ul class="external-links">
         {{with .Params.github}}
-        <li><a href="{{ . }}" target="_blank"><i class="fab fa-github-square fa-lg"></i></a></li>
+        <li><a href="{{ . }}" target="_blank" aria-label="See GitHub repo of project"><i class="fab fa-github-square fa-lg"></i></a></li>
         {{end}}
         {{with .Params.link}}
-        <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
+        <li><a href="{{ . }}" target="_blank" aria-label="Read more about blog"><i class="fas fa-external-link-alt"></i></a></li>
         {{end}}
     </ul>
 
