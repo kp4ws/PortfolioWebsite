@@ -6,7 +6,7 @@
 
     <div class="project-bio">
         <div class="project-title">
-            <h2>{{ .Title }}</h2>
+            <h4>{{ .Title }}</h4>
             <p>
                 {{ with .Params.Tags}}
                     {{ delimit . ", " | replaceRE "-Sharp" "#" }}

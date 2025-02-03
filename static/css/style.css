@@ -240,7 +240,7 @@ ABOUT STYLES
   font-weight: bold;
 }
 
-.bio-header h1 {
+.bio-header h2 {
   font-size: 2.5em;
 }
 
@@ -325,7 +325,7 @@ PROJECT STYLES
   margin-bottom: 1rem;
 }
 
-.project-title h2 {
+.project-title h4 {
   font-weight: bold;
   font-size: 2.4rem;
 }
@@ -369,8 +369,9 @@ BLOG STYLES
   margin-bottom: 1rem;
 }
 
-.blog-title h2 {
+.blog-title h4 {
   font-weight: bold;
+  font-size: 2.4rem;
 }
 
 .blog-title p {
