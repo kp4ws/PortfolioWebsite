@@ -1,7 +1,7 @@
 function getParticleAmount(screenWidth) {
   if (screenWidth < 768) {
     //Mobile
-    return 350;
+    return 200;
   } else if (screenWidth < 1200) {
     //Tablet
     return 400;
