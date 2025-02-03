@@ -1,26 +1,26 @@
 function getParticleAmount(screenWidth) {
   if (screenWidth < 768) {
     //Mobile
-    return 500;
+    return 200;
   } else if (screenWidth < 1200) {
     //Tablet
-    return 800;
+    return 350;
   } else {
     //Large screens
-    return 1000;
+    return 500;
   }
 }
 
 function getConnectionDistance(screenWidth) {
   if (screenWidth < 768) {
     //Mobile
-    return 80;
+    return 60;
   } else if (screenWidth < 1200) {
     //Tablet
-    return 90;
+    return 70;
   } else {
     //Large screens
-    return 100;
+    return 80;
   }
 }
 
