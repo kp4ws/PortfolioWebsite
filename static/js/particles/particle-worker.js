@@ -1,26 +1,26 @@
 function getParticleAmount(screenWidth) {
   if (screenWidth < 768) {
     //Mobile
-    return 200;
+    return 250;
   } else if (screenWidth < 1200) {
     //Tablet
     return 400;
   } else {
     //Large screens
-    return 650;
+    return 500;
   }
 }
 
 function getConnectionDistance(screenWidth) {
   if (screenWidth < 768) {
     //Mobile
-    return 70;
+    return 60;
   } else if (screenWidth < 1200) {
     //Tablet
-    return 80;
+    return 70;
   } else {
     //Large screens
-    return 90;
+    return 80;
   }
 }
 
@@ -32,8 +32,8 @@ function initializeParticles(canvasWidth, canvasHeight) {
     particles.push({
       x: Math.random() * canvasWidth,
       y: Math.random() * canvasHeight,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
       radius: Math.random() * 2 + 1,
     });
   }
