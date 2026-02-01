@@ -1,59 +1,78 @@
 {{ define "hero"}}
-    <!-- About Section -->
-    <section class="about-section hero-section">
-        <div class="section-link" id="about" style="z-index: -20;"></div>
-        {{ partial "about.html" }}
-    </section>
-    <canvas id="bg-canvas"></canvas>
+<!-- About Section -->
+<section class="about-section hero-section">
+  <div class="section-link" id="about" style="z-index: -20;"></div>
+  {{ partial "about.html" }}
+</section>
+
+<canvas id="bg-canvas"></canvas>
 {{ end }}
 
 {{ define "main-section" }}
-<!--Skills section-->
-<section class="skill-section">
-    <div class="section-link" id="skill" ></div>
-    <h3 class="section-heading" style="padding: 0;">Skills</h3>
-    <article class="main-container skill-container">
-        {{ range where .Site.RegularPages "Type" "skills" }}
-        {{ .Render "summary"}}
-        {{ end }}
-    </article>
+
+<!--Experience section-->
+<section class="experience-section">
+  <div class="section-link" id="experience"></div>
+  <h3 class="section-heading">Experience</h3>
+  <article class="main-container experience-container">
+    {{ range where .Site.RegularPages "Type" "experience" }}
+    <div class="experience-card shadow">
+      <div class="experience-bio">
+        <div class="experience-header">
+          <h4>{{ .Params.position }}</h4>
+          <p class="experience-company">{{ .Params.company }}</p>
+        </div>
+
+        <div class="experience-meta">
+          <p class="experience-date">{{ .Params.start }} – {{ .Params.end }}</p>
+          <p class="experience-location">{{ .Params.location }}</p>
+        </div>
+
+        <div class="experience-description">
+          <ul>
+            {{ range .Params.responsibilities }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </article>
 </section>
 
 <!--Projects section-->
 <section class="project-section">
-    <div class="section-link" id="project"></div>
-    <h3 class="section-heading">Projects</h3>
-    <article class="main-container project-container">
-        {{ range where .Site.RegularPages "Type" "projects" }}
-        {{ .Render "summary"}}
-        {{ end }}
-    </article>
+  <div class="section-link" id="project"></div>
+  <h3 class="section-heading">Projects</h3>
+  <article class="main-container project-container">
+    {{ range where .Site.RegularPages "Type" "projects" }}
+    {{ .Render "summary"}}
+    {{ end }}
+  </article>
 </section>
+
+<!--Skills section-->
+{{ partial "skills.html" . }}
+
 
 <!--Blog section-->
 <section class="blog-section">
-    <div class="section-link" id="blog"></div>
-    <h3 class="section-heading">Blogs</h3>
-    <article class="main-container blog-container">
-        {{ range where .Site.RegularPages "Type" "blogs" }}
-        {{ .Render "summary"}}
-        {{ end }}
-    </article>
+  <div class="section-link" id="blog"></div>
+  <h3 class="section-heading">Blogs</h3>
+  <article class="main-container blog-container">
+    {{ range where .Site.RegularPages "Type" "blogs" }}
+    {{ .Render "summary"}}
+    {{ end }}
+  </article>
 </section>
 
-<!-- FUTURE UPDATE:
-    
-    <section class="experience-section">
-            <h3>Experience</h3>
-        </section> 
-    
--->
 
 <!--Contact section-->
 <section class="contact-section">
-    <div class="section-link" id="contact"></div>
-    <h3 class="section-heading" style="padding: 0;">Contact</h3>
-    {{ partial "contact.html" . }}
+  <div class="section-link" id="contact"></div>
+  <h3 class="section-heading">Contact</h3>
+  {{ partial "contact.html" . }}
 </section>
 
 {{end}}

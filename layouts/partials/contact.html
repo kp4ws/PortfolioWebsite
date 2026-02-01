@@ -1,20 +1,53 @@
-<!--TODO: Add custom thank you page-->
 <div class="main-container contact-container">
-    <form name="contact" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
+    <div class="contact-content">
+        <div class="contact-text">
+            <h4>Get In Touch</h4>
+            <p>I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just
+                want to say hi, I'll try my best to get back to you!</p>
 
-        <p style="visibility: hidden;">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-        </p>
+            <div class="contact-socials">
+                <ul class="about-links" style="padding: 0; margin-top: 2rem;">
+                    {{ with .Site.Params.social.github }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Github profile"><i
+                                class="fab fa-github-square fa-lg"></i></a></li>
+                    {{ end }}
+                    {{ with .Site.Params.social.linkedin }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Linkedin Profile"><i
+                                class="fab fa-linkedin fa-lg"></i></a></li>
+                    {{ end }}
+                    {{ with .Site.Params.social.itchio }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Itch.io Profile"><i
+                                class="fab fa-itch-io fa-lg"></i></a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
 
-        <label class="form-label" for="name">Name</label>
-        <input class="form-field" type="text" id="name" name="name" placeholder="Your name.." required/>
+        <form name="contact" class="contact-form shadow" action="/thankyou/" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" netlify>
 
-        <label class="form-label" for="email">Email</label>
-        <input class="form-field" type="email" id="email" name="email" placeholder="Your email.." required/>
+            <p style="visibility: hidden; position: absolute;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
-        <label class="form-label" for="message">Message</label> <!--TODO message field goes out of view when typing-->
-        <textarea class="form-field" id="message" name="message" placeholder="Write something.." rows="5" cols="24" required></textarea>
+            <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-field" type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
 
-        <button class="submit-button" type="submit">Send</button>
-    </form>
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-field" type="email" id="email" name="email" placeholder="your.email@example.com"
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-field form-textarea" id="message" name="message" placeholder="Write a message..."
+                    rows="6" required></textarea>
+            </div>
+
+            <button class="submit-button" type="submit">Send Message</button>
+        </form>
+    </div>
 </div>

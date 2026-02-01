@@ -1,35 +1,112 @@
-<article class="project-column shadow">
-
-    {{/*  {{ with .Resources.GetMatch "*.png" }}
-    <img class="project-image" src="{{ .RelPermalink }}" width="200" height="200" alt="">
-    {{ end }}  */}}
-
-    <div class="project-bio">
-        <div class="project-title">
-            <h4>{{ .Title }}</h4>
-            <p>
-                {{ with .Params.Tags}}
-                    {{ delimit . ", " | replaceRE "-Sharp" "#" }}
-                {{ end }}
-            </p>
-        </div>
+<article class="project-card shadow">
+    <div class="project-content">
+        <header class="project-header">
+            <h3 class="project-title">{{ .Title }}</h3>
+            {{ with .Params.subtitle }}
+            <p class="project-subtitle">{{ . }}</p>
+            {{ end }}
+        </header>
 
         <div class="project-technologies">
+            {{ with .Params.core_tags }}
+            {{ range . }}
+            <span class="tech-badge">{{ . }}</span>
+            {{ end }}
+            {{ end }}
         </div>
 
         <div class="project-description">
             <p>{{ .Content | safeHTML }}</p>
         </div>
+
+        <div class="project-footer">
+            <ul class="project-links">
+                {{with .Params.github}}
+                <li><a href="{{ . }}" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github fa-lg"></i>
+                        Code</a></li>
+                {{end}}
+                {{with .Params.link}}
+                <li><a href="{{ . }}" target="_blank" aria-label="Live Project"><i class="fas fa-external-link-alt"></i>
+                        Live</a></li>
+                {{end}}
+            </ul>
+
+            {{ if or .Params.tech_stack .Params.goals .Params.features .Params.roles .Params.inspiration }}
+            <button class="expand-toggle" aria-expanded="false" aria-label="Toggle details">
+                <span>Details</span>
+                <i class="fas fa-chevron-up toggle-icon"></i>
+            </button>
+            {{ end }}
+        </div>
     </div>
 
-    <ul class="external-links">
-        {{with .Params.github}}
-            <li><a href="{{ . }}" target="_blank" aria-label="See GitHub repo of project"><i class="fab fa-github-square fa-lg"></i></a></li>
-        {{end}}
-        {{with .Params.link}}
-        <!-- TODO: Consider adding this back in within a future iteration -->
-            <!-- <li><a href="{{ . }}" target="_blank"><i class="fas fa-external-link-alt"></i></a></li> -->
-        {{end}}
-    </ul>
+    <!-- Expandable Details Section - Overlays from Bottom -->
+    {{ if or .Params.tech_stack .Params.goals .Params.features .Params.roles .Params.inspiration }}
+    <div class="project-details">
+        <button class="details-close" aria-label="Close details">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="details-content">
 
+
+            <!-- Tech Stack -->
+            {{ with .Params.tech_stack }}
+            <div class="detail-block">
+                <h5>Tech Stack</h5>
+                <div class="tech-grid">
+                    {{ range $category, $items := . }}
+                    <div class="tech-item">
+                        <strong>{{ humanize $category }}:</strong> <span>{{ $items | replaceRE "-Sharp" "#" }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
+            <!-- Goals -->
+            {{ with .Params.goals }}
+            <div class="detail-block">
+                <h5>Goals</h5>
+                <ul>
+                    {{ range . }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            <!-- Features -->
+            {{ with .Params.features }}
+            <div class="detail-block">
+                <h5>Features</h5>
+                <ul>
+                    {{ range . }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            <!-- Roles -->
+            {{ with .Params.roles }}
+            <div class="detail-block">
+                <h5>Roles</h5>
+                <ul>
+                    {{ range . }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            <!-- Inspiration -->
+            {{ with .Params.inspiration }}
+            <div class="detail-block">
+                <h5>Inspiration</h5>
+                <p>{{ . }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
 </article>

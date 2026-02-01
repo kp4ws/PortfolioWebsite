@@ -1,0 +1,57 @@
+languages:
+  - name: Java
+    badge: "https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+  - name: C
+    badge: "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
+  - name: C++
+    badge: "https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+  - name: C#
+    badge: "https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"
+  - name: Python
+    badge: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+  - name: JavaScript
+    badge: "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+  - name: HTML5
+    badge: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+  - name: CSS3
+    badge: "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+
+frameworks:
+  - name: ASP.NET
+    badge: "https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"
+  - name: React
+    badge: "https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
+  - name: Vue.js
+    badge: "https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
+  - name: Node.js
+    badge: "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
+  - name: Express
+    badge: "https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white"
+  - name: jQuery
+    badge: "https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"
+  - name: Bootstrap
+    badge: "https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+  - name: Phaser
+    badge: "https://img.shields.io/badge/Phaser-4B0082?style=for-the-badge&logo=phaser&logoColor=white"
+
+databases:
+  - name: MySQL
+    badge: "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+  - name: PostgreSQL
+    badge: "https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
+  - name: Oracle
+    badge: "https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"
+  - name: MongoDB
+    badge: "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+  - name: SQL Server
+    badge: "https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white"
+
+tools:
+  - name: Unity
+    badge: "https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white"
+  - name: Unreal Engine
+    badge: "https://img.shields.io/badge/Unreal_Engine-0E1128?style=for-the-badge&logo=unreal-engine&logoColor=white"
+  - name: Godot
+    badge: "https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white"
+  - name: Blender
+    badge: "https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white"

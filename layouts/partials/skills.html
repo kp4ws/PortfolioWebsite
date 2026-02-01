@@ -1,0 +1,47 @@
+<section class="skill-section">
+  <div class="section-link" id="skill"></div>
+  <h3 class="section-heading">Skills & Tools</h3>
+
+  <!-- Separated Categories -->
+  <div class="skill-categories-separated">
+    <!-- Languages -->
+    <div class="skill-category-card">
+      <h4>💻 Languages</h4>
+      <div class="skill-badges">
+        {{ range .Site.Data.skills.languages }}
+          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Frameworks -->
+    <div class="skill-category-card">
+      <h4>🔧 Frameworks & Libraries</h4>
+      <div class="skill-badges">
+        {{ range .Site.Data.skills.frameworks }}
+          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Databases -->
+    <div class="skill-category-card">
+      <h4>🗄 Databases</h4>
+      <div class="skill-badges">
+        {{ range .Site.Data.skills.databases }}
+          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category-card">
+      <h4>🎮 Game & Creative Tools</h4>
+      <div class="skill-badges">
+        {{ range .Site.Data.skills.tools }}
+          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

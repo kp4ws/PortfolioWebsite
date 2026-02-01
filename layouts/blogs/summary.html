@@ -1,28 +1,25 @@
-<article class="blog-column shadow">
+<article class="project-card shadow">
+    <div class="project-content">
+        <header class="project-header">
+            <h3 class="project-title">{{ .Title }}</h3>
+            <p class="project-subtitle">{{ .Date.Format "January 2006" }} - {{ .Params.time }} min read</p>
+        </header>
 
-    {{/* {{ with .Resources.GetMatch "*.png" }}
-    <img class="blog-image" src="{{ .RelPermalink }}" width="200" height="200" alt="">
-    {{ end }} */}}
-
-    <div class="project-bio">
-        <div class="blog-title">
-            <h4>{{ .Title }}</h4>
-            <p>{{ .Date.Format "January 2006" }} - {{ .Params.time }} min read</p>
+        <div class="project-description">
+            <p>{{ .Content | safeHTML }}</p>
         </div>
 
-        <div class="blog-description">
-            <p>{{ .Content }}</p>
+        <div class="project-footer">
+            <ul class="project-links">
+                {{with .Params.github}}
+                <li><a href="{{ . }}" target="_blank" aria-label="GitHub Repo"><i class="fab fa-github fa-lg"></i>
+                        Code</a></li>
+                {{end}}
+                {{with .Params.link}}
+                <li><a href="{{ . }}" target="_blank" aria-label="Read more"><i class="fas fa-external-link-alt"></i>
+                        Read</a></li>
+                {{end}}
+            </ul>
         </div>
-
     </div>
-
-    <ul class="external-links">
-        {{with .Params.github}}
-        <li><a href="{{ . }}" target="_blank" aria-label="See GitHub repo of project"><i class="fab fa-github-square fa-lg"></i></a></li>
-        {{end}}
-        {{with .Params.link}}
-        <li><a href="{{ . }}" target="_blank" aria-label="Read more about blog"><i class="fas fa-external-link-alt"></i></a></li>
-        {{end}}
-    </ul>
-
 </article>

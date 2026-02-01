@@ -1,30 +1,36 @@
 <article class="main-container about-container">
-    <div>
-        <div class="bio" style="margin: 0 auto;">
-            <div class="bio-header">
-                <h2>Hello there!</h2>
-                <p> I'm Kent</p>
+    <div class="hero-content-wrapper">
+        <div class="hero-text">
+            <h2 class="hero-greeting">Hello there!</h2>
+            <h1 class="hero-name">I'm <span class="highlight-text">Kent</span></h1>
+            <p class="hero-tagline">I love to learn new things and my creative mind greatly aids in my problem solving
+                skills.</p>
+            <p class="hero-subtext">As a hobby, I create games and enjoy playing guitar in my free time.</p>
+
+            <!--Social Media links-->
+            <div class="hero-socials">
+                <ul class="about-links">
+                    {{ with .Site.Params.social.github }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Github profile"><i
+                                class="fab fa-github-square fa-lg"></i></a></li>
+                    {{ end }}
+                    {{ with .Site.Params.social.linkedin }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Linkedin Profile"><i
+                                class="fab fa-linkedin fa-lg"></i></a></li>
+                    {{ end }}
+                    {{ with .Site.Params.social.itchio }}
+                    <li><a href="{{ . }}" target="_blank" aria-label="Itch.io Profile"><i
+                                class="fab fa-itch-io fa-lg"></i></a></li>
+                    {{ end }}
+                </ul>
             </div>
-            <p>I love to learn new things and my creative mind greatly aids in my problem
-                solving skills.</p>
-            <p>As a hobby, I create games and enjoy playing guitar in my free time.</p>
         </div>
 
         <!--Profile Image-->
-        <div class="profile">
-            <img src="/images/profile-image.jpg" class="profile-image" width="400" height="400" alt="" />
-
-            <!--Social Media links-->
-            <ul class="about-links">
-                <li><a href="https://github.com/kp4ws" target="_blank" aria-label="Github profile"><i class="fab fa-github-square fa-lg"></i></a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/kentpawson/" target="_blank" aria-label="Linkedin Profile"><i
-                            class="fab fa-linkedin fa-lg"></i></a>
-                </li>
-                <li><a href="https://kpaws-games.itch.io/" target="_blank" aria-label="Itch.io Profile"><i class="fab fa-itch-io fa-lg"></i></a>
-                </li>
-            </ul>
+        <div class="hero-image-container">
+            <div class="image-blobs"></div>
+            <img src="/images/profile-image.jpg" class="profile-image" width="400" height="400"
+                alt="Kent Profile Picture" />
         </div>
     </div>
-
 </article>

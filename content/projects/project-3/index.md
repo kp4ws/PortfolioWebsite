@@ -1,10 +1,16 @@
 ---
-title: "Block Destroyer Mobile"
-date: 2021-09-18T11:23:23-06:00
-tags: ["Unity", "C-Sharp"]
-github: "https://github.com/kp4ws/Block-Destroyer-Mobile"
-link: "https://play.google.com/store/apps/details?id=com.Kp4wsGames.BlockDestroyer"
-draft: false
+title: "Ugga's Prehistoric Smackdown"
+subtitle: "2D Game (Prototype)"
+core_tags: ["Godot", "GDScript", "Pixel Art"]
 weight: 3
+tags: ["Godot", "GDScript", "C#", "Pixel Art"]
+features:
+  - "Play as Ugga and navigate through multiple levels"
+  - "Collect items and power-ups to enhance abilities"
+  - "Explore levels with a focus on fun, classic platforming"
+tech_stack:
+  "Game Engine": "Godot"
+  "Art / Assets": "Pixel art"
+  "Languages": "GDScript for UI and gameplay scripts, C# for advanced systems"
 ---
-Mobile breakout-like game that procedurally generates each wave of blocks
+A 2D side-scrolling platformer set in prehistoric times, with pixel art environments and classic platforming gameplay.
