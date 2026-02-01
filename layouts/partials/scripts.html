@@ -1,4 +1,10 @@
 <script defer src="https://kit.fontawesome.com/926dde6f9c.js" crossorigin="anonymous"></script>
-<script src="/js/menu.js"></script>
-<script src="/js/particles/particle-system.js"></script>
-<script src="/js/project-expand.js"></script>
+
+{{ $menu := resources.Get "js/menu.js" | minify | fingerprint }}
+<script src="{{ $menu.RelPermalink }}" integrity="{{ $menu.Data.Integrity }}" defer></script>
+
+{{ $particles := resources.Get "js/particle-system.js" | minify | fingerprint }}
+<script src="{{ $particles.RelPermalink }}" integrity="{{ $particles.Data.Integrity }}" defer></script>
+
+{{ $expand := resources.Get "js/project-expand.js" | minify | fingerprint }}
+<script src="{{ $expand.RelPermalink }}" integrity="{{ $expand.Data.Integrity }}" defer></script>

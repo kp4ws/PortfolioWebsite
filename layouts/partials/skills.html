@@ -6,40 +6,50 @@
   <div class="skill-categories-separated">
     <!-- Languages -->
     <div class="skill-category-card">
-      <h4>💻 Languages</h4>
+      <h4>Languages</h4>
       <div class="skill-badges">
         {{ range .Site.Data.skills.languages }}
-          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
         {{ end }}
       </div>
     </div>
 
     <!-- Frameworks -->
     <div class="skill-category-card">
-      <h4>🔧 Frameworks & Libraries</h4>
+      <h4>Frameworks & Libraries</h4>
       <div class="skill-badges">
         {{ range .Site.Data.skills.frameworks }}
-          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
         {{ end }}
       </div>
     </div>
 
     <!-- Databases -->
     <div class="skill-category-card">
-      <h4>🗄 Databases</h4>
+      <h4>Databases</h4>
       <div class="skill-badges">
         {{ range .Site.Data.skills.databases }}
-          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
         {{ end }}
       </div>
     </div>
 
     <!-- Tools -->
     <div class="skill-category-card">
-      <h4>🎮 Game & Creative Tools</h4>
+      <h4>Game & Creative Tools</h4>
       <div class="skill-badges">
         {{ range .Site.Data.skills.tools }}
-          <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
+        {{ end }}
+      </div>
+    </div>
+
+    <!-- Version Control -->
+    <div class="skill-category-card">
+      <h4>Version Control & Collaboration</h4>
+      <div class="skill-badges">
+        {{ range .Site.Data.skills.version_control }}
+        <img src="{{ .badge }}" alt="{{ .name }}" title="{{ .name }}" />
         {{ end }}
       </div>
     </div>
