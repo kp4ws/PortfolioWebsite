@@ -1,9 +1,9 @@
 ---
 title: "Game Engine"
 subtitle: "Work in Progress"
-core_tags: ["C++", "Lua", "Vulkan"]
+core_tags: ["c-plus-plus", "Lua", "Vulkan"]
 weight: 2
-tags: ["C++", "Lua", "Vulkan", "Visual Studio"]
+tags: ["c-plus-plus", "Lua", "Vulkan", "Visual Studio"]
 goals:
   - "Modular architecture for flexible gameplay mechanics"
   - "Experimenting with graphics, system design, and scripting support"

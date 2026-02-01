@@ -10,7 +10,7 @@
         <div class="project-technologies">
             {{ with .Params.core_tags }}
             {{ range . }}
-            <span class="tech-badge">{{ . }}</span>
+            <span class="tech-badge">{{ . | replaceRE "c-sharp" "C#" | replaceRE "c-plus-plus" "C++" }}</span>
             {{ end }}
             {{ end }}
         </div>

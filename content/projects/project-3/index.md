@@ -3,7 +3,7 @@ title: "Ugga's Prehistoric Smackdown"
 subtitle: "2D Game (Prototype)"
 core_tags: ["Godot", "GDScript", "Pixel Art"]
 weight: 3
-tags: ["Godot", "GDScript", "C#", "Pixel Art"]
+tags: ["Godot", "GDScript", "c-sharp", "Pixel Art"]
 features:
   - "Play as Ugga and navigate through multiple levels"
   - "Collect items and power-ups to enhance abilities"
