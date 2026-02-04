@@ -24,7 +24,16 @@
         </div>
 
         <form name="contact" class="contact-form shadow" action="/thankyou/" method="POST" data-netlify="true"
+            netlify>
+            <!-- TODO: Renable honeypot later:
+                <form name="contact" class="contact-form shadow" action="/thankyou/" method="POST" data-netlify="true"
             netlify-honeypot="bot-field" netlify>
+            
+            Alternative to bot detection:
+            <div style="display:none;">
+            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+            </div>}
+            -->
 
             <p style="visibility: hidden; position: absolute;">
                 <label>Don't fill this out if you're human: <input name="bot-field" /></label>
