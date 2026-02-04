@@ -14,5 +14,5 @@ responsibilities:
   - "Fostered a positive, encouraging learning environment that kept students engaged and confident while learning to code."
   - "Adapted teaching approaches and explanations to match student understanding and learning pace."
 draft: false
-weight: 4
+weight: 2
 ---

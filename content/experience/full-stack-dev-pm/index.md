@@ -12,5 +12,5 @@ responsibilities:
   - Created detailed project reports to track progress, document client requirements, and improve visibility and accountability.
   - Assisted with onboarding clients and delivered tutorials and training, supporting successful adoption of software products.
 draft: false
-weight: 1
+weight: 5
 ---

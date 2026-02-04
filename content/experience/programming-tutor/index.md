@@ -13,5 +13,5 @@ responsibilities:
   - Created and maintained documentation, knowledge base articles, and FAQs for a Computer Science support hub.
   - Collaborated with team members to enhance Help Centre processes, efficiency, and service quality.
 draft: false
-weight: 3
+weight: 1
 ---

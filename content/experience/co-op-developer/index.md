@@ -13,5 +13,5 @@ responsibilities:
   - Managed large mock datasets with Microsoft Excel and VLOOKUP, ensuring data accuracy and integrity.
   - Demonstrated self-motivation and time management in a fully remote work environment.
 draft: false
-weight: 5
+weight: 4
 ---

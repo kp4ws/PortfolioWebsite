@@ -13,5 +13,5 @@ responsibilities:
   - Conducted stress, pressure, and temperature testing and performed hardware/software debugging to ensure system reliability.
   - Created and maintained software documentation to support engineering processes.
 draft: false
-weight: 2
+weight: 3
 ---
