@@ -1,11 +1,11 @@
 ---
 title: "Procedural Terrain Generation"
 subtitle: "Unity & C#"
-core_tags: ["Unity", "C#", "Procedural Generation"]
+core_tags: ["Unity", "c-sharp", "Procedural Generation"]
 weight: 1
 github: "https://github.com/kp4ws/ProceduralTerrain"
 link: "https://kentpawson123.medium.com/procedural-generation-implementation-d9472d053cef"
-tags: ["Unity", "C#", "Procedural Generation", "Algorithms"]
+tags: ["Unity", "c-sharp", "Procedural Generation", "Algorithms"]
 features:
   - "Implementation of Procedural Terrain Generation algorithms"
   - "Dynamic landscape generation within a Unity scene"
