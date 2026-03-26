@@ -1,7 +1,7 @@
 ---
-title: "Programming Tutor"
+title: "Help Centre Staff"
 type: "experience"
-position: "Programming Tutor"
+position: "Help Centre Staff"
 company: "Vancouver Island University"
 location: "Nanaimo, BC"
 start: "August 2025"

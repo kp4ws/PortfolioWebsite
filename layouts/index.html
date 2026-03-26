@@ -56,17 +56,6 @@
 {{ partial "skills.html" . }}
 
 
-<!--Blog section-->
-<section class="blog-section">
-  <div class="section-link" id="blog"></div>
-  <h3 class="section-heading">Blogs</h3>
-  <article class="main-container blog-container">
-    {{ range where .Site.RegularPages "Type" "blogs" }}
-    {{ .Render "summary"}}
-    {{ end }}
-  </article>
-</section>
-
 
 <!--Contact section-->
 <section class="contact-section">

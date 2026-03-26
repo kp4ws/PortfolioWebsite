@@ -1,7 +1,7 @@
 ---
-title: "Coding Club Leader"
+title: "Coding Club Assistant"
 type: "experience"
-position: "Coding Club Leader"
+position: "Coding Club Assistant"
 company: "Vancouver Island University"
 location: "Nanaimo, BC"
 start: "August 2025"

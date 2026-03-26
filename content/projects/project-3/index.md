@@ -1,16 +1,17 @@
 ---
-title: "Ugga's Prehistoric Smackdown"
-subtitle: "2D Game (Prototype)"
-core_tags: ["Godot", "GDScript", "Pixel Art"]
+title: "Level Ground Recruitment"
+subtitle: "Full-Stack Web App (College Capstone)"
+core_tags: ["React", "Java", "MySQL"]
 weight: 3
-tags: ["Godot", "GDScript", "c-sharp", "Pixel Art"]
-features:
-  - "Play as Ugga and navigate through multiple levels"
-  - "Collect items and power-ups to enhance abilities"
-  - "Explore levels with a focus on fun, classic platforming"
+github: "https://github.com/ArmaanSinghKlair/level-ground-recruitment"
+tags: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "jQuery", "Java", "JPA", "JSTL", "JavaMail", "MySQL"]
+roles:
+  - "Candidate: Applies to job postings"
+  - "Business Client: Creates and manages job postings"
+  - "Advisor: System administrator overseeing the hiring process"
 tech_stack:
-  "Game Engine": "Godot"
-  "Art / Assets": "Pixel art"
-  "Languages": "GDScript for UI and gameplay scripts, C# for advanced systems"
+  Frontend: "HTML, CSS, JavaScript, React, Bootstrap, jQuery"
+  Backend: "Java, JPA API, JSTL, JavaMail"
+  Database: "MySQL"
 ---
-A 2D side-scrolling platformer set in prehistoric times, with pixel art environments and classic platforming gameplay.
+A Talent Agency web application designed to remove bias in the hiring process by hiding candidates' personal data, allowing business clients to hire based solely on relevant skills.

@@ -27,11 +27,6 @@ summaryLength = 55
     weight = 4
 
     [[menu.nav]]
-    name = "Blogs"
-    URL = "#blog"
-    weight = 5
-
-    [[menu.nav]]
     name = "Contact"
     URL = "#contact"
     weight = 6

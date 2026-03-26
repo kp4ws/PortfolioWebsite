@@ -1,16 +1,17 @@
 ---
-title: "Level Ground Recruitment"
-subtitle: "Full-Stack Web App (College Capstone)"
-core_tags: ["React", "Java", "MySQL"]
+title: "Procedural Terrain Generation"
+subtitle: "Unity & C#"
+core_tags: ["Unity", "C#", "Procedural Generation"]
 weight: 1
-tags: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "jQuery", "Java", "JPA", "JSTL", "JavaMail", "MySQL"]
-roles:
-  - "Candidate: Applies to job postings"
-  - "Business Client: Creates and manages job postings"
-  - "Advisor: System administrator overseeing the hiring process"
+github: "https://github.com/kp4ws/ProceduralTerrain"
+link: "https://kentpawson123.medium.com/procedural-generation-implementation-d9472d053cef"
+tags: ["Unity", "C#", "Procedural Generation", "Algorithms"]
+features:
+  - "Implementation of Procedural Terrain Generation algorithms"
+  - "Dynamic landscape generation within a Unity scene"
+  - "Featured in a published technical blog post detailing the process"
 tech_stack:
-  Frontend: "HTML, CSS, JavaScript, React, Bootstrap, jQuery"
-  Backend: "Java, JPA API, JSTL, JavaMail"
-  Database: "MySQL"
+  Engine: "Unity"
+  Language: "C#"
 ---
-A Talent Agency web application designed to remove bias in the hiring process by hiding candidates' personal data, allowing business clients to hire based solely on relevant skills.
+A project developed to explore and demonstrate Procedural Terrain Generation techniques. It features a Unity scene that procedurally generates a 3D landscape and serves as the practical implementation for a detailed technical blog post on Emerging Trends in technology.

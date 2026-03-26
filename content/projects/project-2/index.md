@@ -1,17 +1,20 @@
 ---
-title: "Game Engine"
-subtitle: "Work in Progress"
-core_tags: ["c-plus-plus", "Lua", "Vulkan"]
+title: "CS Degree Planner"
+subtitle: "Full-Stack Web App (In Progress)"
+core_tags: ["Next.js", "FastAPI", "PostgreSQL"]
 weight: 2
-tags: ["c-plus-plus", "Lua", "Vulkan", "Visual Studio"]
-goals:
-  - "Modular architecture for flexible gameplay mechanics"
-  - "Experimenting with graphics, system design, and scripting support"
-  - "A foundation for future game prototypes"
+github: "https://github.com/kp4ws/CS-Planner"
+tags: ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT"]
+features:
+  - "JWT-based authentication with secure password hashing"
+  - "Protected routes and user profile management"
+  - "Degree planner with course and semester tracking"
+  - "PDF degree audit parsing for automatic plan generation"
 tech_stack:
-  "Core Language": "C++"
-  "Scripting Language": "Lua"
-  "Graphics / API": "Vulkan"
-  "Development Tools": "Visual Studio"
+  Frontend: "Next.js (App Router, TypeScript, Tailwind CSS, shadcn/ui)"
+  Backend: "FastAPI (Python)"
+  Database: "PostgreSQL, SQLAlchemy, Alembic"
+  Auth: "JWT + bcrypt"
+  Hosting: "Vercel (frontend), Render (backend + database)"
 ---
-A personal project to build a custom game engine, combining everything I've learned in computer science. This project is also driven by curiosity and the joy of experimenting with game systems.
+A web application designed to help CS students plan and track their degree progression. Built as the foundation of a larger student hub, starting with a degree planner and expanding to job tracking, assignment tracking, and more.
