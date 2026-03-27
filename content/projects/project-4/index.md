@@ -16,4 +16,4 @@ tech_stack:
   Database & Auth: "Supabase (PostgreSQL)"
   Infrastructure: "Docker, Docker Compose"
 ---
-A full-stack, minimalist workspace toolkit currently in progress. Designed as a flexible dashboard application, it helps freelancers and small businesses manage their daily operations with customizable tools, secure cloud syncing, and offline capabilities.
+A full-stack, minimalist workspace toolkit currently in progress. Designed as a flexible dashboard application, it helps freelancers and small businesses manage their daily operations with customizable tools and offline capabilities.
